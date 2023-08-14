@@ -1,0 +1,122 @@
+.quote_hero {
+    min-height: 500px;
+    padding-block: 1rem;
+    position: relative;
+    isolation: isolate;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    
+    
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(135deg,var(--col-primary-400) 16%, hsl(var(--hsl-primary-400) / .78) 100%);
+        // mix-blend-mode: multiply;
+        z-index: -1;
+    }
+    
+    display: grid;
+    place-content: center;
+
+    color: white;
+    span {
+        color: var(--col-secondary-400);
+    }
+
+    .pre_title {
+        text-align: center;
+    }
+    .pre_form {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .icon_grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        & > div {
+            width: 200px;
+            text-align: center;
+            img {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    a {
+        color: var(--col-secondary-400) !important;
+        &:hover{
+            color: white !important;
+        }
+    }
+
+    .hero_form {
+        background-color: white;
+        border-radius: var(--border-sm);
+        max-width: 590px;
+        margin-inline: auto;
+        margin-bottom: 3rem;
+        padding: 0.5rem 1rem;
+
+        .gform_heading { display: none; }        
+        form {
+            display: grid;
+            gap: 1rem;
+            align-items: center;
+            @media (min-width:576px) {
+                grid-template-columns: 1fr auto;
+            }
+        }
+        .gform-body {
+            // width: 75%;
+        }
+        label {
+            display: none !important;
+        }
+
+        input[type=text] {
+            border: none;
+            border-bottom: 1px solid var(--col-primary-400);
+        }
+
+        button[type=submit] {
+            @extend .btn;
+            @extend .btn-primary;
+            text-transform: initial;
+            span {
+                color: white;
+            }
+        }
+
+        .gform_footer {
+            padding: 0 !important;
+        }
+    }
+
+}
+
+.quote_block {
+    .gform_heading {
+        display: none;
+    }
+    .gform_footer {
+        padding-block: 0 !important;
+    }
+    label {
+        display: none !important;
+    }
+    button[type=submit] {
+        @extend .btn;
+        @extend .btn-secondary-outline;
+        width: 100%;
+    }
+}

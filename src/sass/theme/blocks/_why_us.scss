@@ -1,0 +1,20 @@
+.why_us {
+    color: var(--col-primary-400);
+    &__preTitle {
+        font-size: var(--fs-300);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        font-family: var(--ff-title);
+        letter-spacing: 0.1em;
+    }
+
+    &__image {
+        aspect-ratio: 1;
+        width: min(210px,90vw);
+    }
+
+    .fs-5 {
+        font-weight: var(--fw-500);
+        margin-bottom: 0.5rem;
+    }
+}

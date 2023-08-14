@@ -1,0 +1,63 @@
+.btn {
+    position: relative;
+    border-radius: 0.25rem;
+    font-weight: var(--fw-500);
+    font-size: var(--fs-300);
+    transition: all 0.3s ease;
+
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: var(--fw-500);
+    border-radius: var(--border-xs);
+    transition: background-color var(--transition);
+
+    &.btn-arrow::after {
+        content: "»";
+        transition: color var(--transition);
+        margin-left: 0.5rem;
+    }
+
+    &:hover {
+        color: white;
+    }
+}
+
+
+.btn-primary {
+    background-color: var(--col-primary-400);
+    border-color: var(--col-primary-400);
+    &::after {
+        color: var(--col-secondary-400);
+    }
+    &:hover {
+        background-color: var(--col-secondary-400);
+        border-color: var(--col-secondary-400);
+        &::after {
+            color: var(--col-primary-400);
+        }
+    }
+}
+
+.btn-secondary {
+    background-color: var(--col-secondary-400);
+    border-color: var(--col-secondary-400);
+    &::after {
+        color: var(--col-primary-400);
+    }
+    &:hover {
+        background-color: var(--col-primary-400);
+        border-color: var(--col-primary-400);
+        &::after {
+            color: var(--col-secondary-400);
+        }
+    }
+}
+
+.btn-secondary-outline {
+    background-color: transparent;
+    border-color: var(--col-secondary-400);
+    &:hover {
+        background-color: var(--col-secondary-400);
+    }
+}

@@ -1,0 +1,49 @@
+$col-primary: #0c4254;
+$col-secondary: #e9988e;
+
+:root {
+
+    --col-primary-900: #0a3847;
+    
+    --hsl-primary-400: 195 75% 19%;
+    // --col-primary-400: #0c4254;
+    --col-primary-400: hsl(var(--hsl-primary-400));
+
+    --col-secondary-400: #e9988e;
+    --col-secondary-200: #fbeae8;
+
+    --col-grey-600: #e8e8e8;
+    --col-grey-400: #e9eef0;
+    --col-grey-200: #f1f4f5;
+    
+    --col-green-400: #00a99d;
+
+    --h-top: 122px;
+
+    --fw-200: 100;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-900: 700;
+
+    --fs-200: clamp(0.69rem, calc(0.66rem + 0.15vw), 0.78rem);
+    --fs-300: clamp(0.83rem, calc(0.80rem + 0.18vw), 0.94rem);
+    --fs-400: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
+    --fs-500: clamp(1.20rem, calc(1.15rem + 0.26vw), 1.35rem);
+    --fs-600: clamp(1.44rem, calc(1.38rem + 0.31vw), 1.62rem);
+    --fs-700: clamp(1.73rem, calc(1.65rem + 0.38vw), 1.94rem);
+    --fs-800: clamp(2.07rem, calc(1.98rem + 0.45vw), 2.33rem);
+    // --fs-900: clamp(2.49rem, calc(2.38rem + 0.54vw), 2.80rem);
+    --fs-900: clamp(2.25rem, calc(1.47rem + 3.91vw), 4.50rem);
+
+
+    --transition: 0.2s ease-out;
+
+    --border-lg: 1rem;
+    --border-sm: 0.5rem;
+    --border-xs: 0.25rem;
+
+    --ff-body: 'Lexend', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --ff-title: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

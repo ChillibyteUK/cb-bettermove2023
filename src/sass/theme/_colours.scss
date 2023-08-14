@@ -1,0 +1,31 @@
+.has-primary-200-color {
+    color: var(--col-primary-200) !important;
+}
+.has-primary-400-color {
+    color: var(--col-primary-400) !important;
+}
+.has-primary-900-color {
+    color: var(--col-primary-900) !important;
+}
+.has-secondary-400-color {
+    color: var(--col-secondary-400) !important;
+}
+
+
+.has-primary-400-background-color {
+    background-color: var(--col-primary-400);
+}
+
+.has-secondary-200-background-color, .bg--secondary {
+    background-color: var(--col-secondary-200);
+}
+
+.has-grey-200-background-color {
+    background-color: var(--col-grey-200);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {
+    span {
+        color: var(--col-secondary-400);
+    }
+}

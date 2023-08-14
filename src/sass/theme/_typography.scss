@@ -1,0 +1,116 @@
+/* lexend-100 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/lexend-v18-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lexend-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/lexend-v18-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lexend-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/lexend-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lexend-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lexend-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+:root {
+    font-variant-ligatures: none;
+}
+
+html {
+    // font-size: var(--fs-400);
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-weight: var(--fw-300);
+    font-size: var(--fs-400);
+    line-height: 1.556;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {
+    font-family: var(--ff-title);
+    font-style: normal;
+    margin-bottom: 0.5rem;
+    font-weight: var(--fw-400);
+    span {
+        font-weight: var(--fw-600);
+    }
+}
+
+h1, .h1 {
+    font-size: var(--fs-900);
+}
+h2, .h2 {
+    font-size: var(--fs-800);
+}
+h3, .h3 {
+    font-size: var(--fs-700);
+}
+h4, .h4 {
+    font-size: var(--fs-600);
+}
+h5, .h5 {
+    font-size: var(--fs-500);
+}
+
+
+strong, b {
+    font-weight: var(--fw-700);
+}
+
+.w-constrained {
+    max-width: 90ch;
+    margin-inline: auto
+}
+
+.has-small-font-size {
+    font-size: var(--fs-200);
+}
+
+.preTitle {
+    font-size: var(--fs-300);
+    text-transform: uppercase;
+    font-family: var(--ff-title);
+    letter-spacing: 0.1em;
+}

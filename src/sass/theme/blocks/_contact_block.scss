@@ -1,0 +1,55 @@
+.contact_block {
+    background-image: url(../img/contact-shutterstock_547444582_resized.jpg);
+    position: relative;
+    isolation: isolate;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(135deg,var(--col-primary-400) 16%, hsl(var(--hsl-primary-400) / .78) 100%);
+        z-index: -1;
+    }
+
+    a {
+        color: white;
+    }
+
+    .gform_heading {
+        display: none;
+    }
+    input[type=text],
+    input[type=tel],
+    input[type=email] {
+        background-color: transparent;
+        border: 1px solid white;
+        width: 100% !important;
+        &::placeholder {
+            color: white;
+            font-family: var(--ff-title);
+            font-size: var(--fs-300);
+            font-weight: var(--fw-400);
+        }
+    }
+    label {
+        display: none !important;
+    }
+    button[type=submit] {
+        width: 100%;
+        border: 1px solid var(--col-secondary-400);
+        background-color: var(--col-primary-400);
+        padding-block: 0.5rem;
+        transition: background-color var(--transition);
+        span {
+            color: white;
+        }
+        &:hover {
+            background-color: var(--col-secondary-400);
+        }
+    }
+}

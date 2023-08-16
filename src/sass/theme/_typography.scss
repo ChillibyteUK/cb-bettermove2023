@@ -96,7 +96,11 @@ h5, .h5 {
 
 
 strong, b {
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-600);
+}
+
+.fw-600 {
+    font-weight: var(--fw-600);
 }
 
 .w-constrained {

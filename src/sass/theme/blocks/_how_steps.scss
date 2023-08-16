@@ -1,0 +1,36 @@
+.how_steps {
+    background-color: var(--col-secondary-200);
+    &__grid {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    &__card {
+        &:nth-of-type(even) {
+            .how_steps__card_inner {
+                margin-inline: auto 0;
+            }
+        }
+        &:last-child .how_steps__divider {
+            display: none;
+        }
+    }
+    &__card_inner {
+        padding: 2rem;
+        background-color: white;
+        width: min(700px,90vw);
+        text-align: left;
+        border-radius: var(--border-xs);
+        a {
+            color: var(--col-secondary-400);
+            &:hover {
+                color: var(--col-primary-400);
+            }
+        }
+    }
+    &__divider {
+        width: 20px;
+        height: 40px;
+        background-color: white;
+        margin-inline: auto;
+    }
+}

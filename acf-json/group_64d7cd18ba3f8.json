@@ -21,11 +21,11 @@
             "esc_html": 0
         },
         {
-            "key": "field_64d7cd385a049",
-            "label": "Icon",
-            "name": "icon",
+            "key": "field_64db3d51fad6e",
+            "label": "Pre Title",
+            "name": "pre_title",
             "aria-label": "",
-            "type": "select",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,21 +34,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "wh": "wh",
-                "same-day": "same-day",
-                "multi-drop": "multi-drop",
-                "international": "international",
-                "fleet": "fleet",
-                "critical": "critical"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_64d7cd245a047",
@@ -67,26 +57,6 @@
             "default_value": "",
             "maxlength": "",
             "placeholder": "H1",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64d7cd305a048",
-            "label": "Intro",
-            "name": "intro",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -134,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692009526
+    "modified": 1692089698
 }

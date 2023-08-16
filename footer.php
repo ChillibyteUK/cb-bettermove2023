@@ -6,13 +6,12 @@ defined('ABSPATH') || exit;
 <footer class="footer pt-5">
     <div class="container-xl pb-4">
         <div class="row pb-4">
-            <div class="col-sm-6 mb-2 order-1">
+            <div class="col-sm-3 mb-2 order-1">
                 <a href="<?=get_home_url()?>"><img
                         src="<?=get_stylesheet_directory_uri()?>/img/bm-logo-white.svg"
                         alt="WH Couriers" class="logo img-fluid mb-4"></a>
-                <div class="mb-2">BETTERMOVE IS A TRADING STYLE OF BLOOTEK VENTURES LIMITED.</div>
-                <div>REGISTERED IN ENGLAND & WALES, COMPANY NUMBER 11833187, REGISTERED ADDRESS 20-22 BRIDGE END, LEEDS,
-                    LS1 4DJ.</div>
+                <div class="mb-2">Bettermove is a trading style of Blootek Ventures Limited.</div>
+                <div>Registered in England &amp; Wales, Company Number 11833187, Registered Address 20-22 Bridge End, Leeds, LS1 4DJ.</div>
             </div>
             <div class="col-sm-6 col-lg-3 mb-2 order-3 order-lg-2">
                 <div class="footer__title">Contact</div>
@@ -30,8 +29,12 @@ defined('ABSPATH') || exit;
                 </ul>
             </div>
             <div class="col-sm-6 col-lg-3 mb-2 order-4 order-lg-3">
-                <div class="footer__title">Browse</div>
+                <div class="footer__title">Services</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?>
+            </div>
+            <div class="col-sm-6 col-lg-3 mb-2 order-4 order-lg-3">
+                <div class="footer__title">Extra</div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_menu2')); ?>
             </div>
         </div>
         <div class="members d-flex gap-4 align-items-center flex-wrap">

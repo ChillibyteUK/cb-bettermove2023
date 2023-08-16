@@ -4,6 +4,8 @@
         background-color: white;
         box-shadow: 0px 12px 18px -6px rgba(12,66,84,0.29);
         height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
     }
     &__title {
         text-align: center;
@@ -11,10 +13,24 @@
         color: white;
         padding: 1rem;
     }
+    &__footer {
+        text-align: center;
+        background-color: var(--col-primary-400);
+        color: white;
+        padding: 1rem;
+        margin-bottom: 0;
+        &--alt {
+            background-color: var(--col-secondary-400);
+        }
+    }
+    &__small {
+        font-size: var(--fs-300);
+    }
     &__body {
         display: grid;
         gap: 1rem;
         padding-block: 1rem 2rem;
+        align-self: flex-start;
     }
     &__no::before {
         position: absolute;
@@ -52,6 +68,15 @@
             margin-inline: auto;
             display: block;
             margin-top: 1.5rem;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding-inline: 2rem;
+        div:nth-of-type(even) {
+            text-align: right;
         }
     }
 }

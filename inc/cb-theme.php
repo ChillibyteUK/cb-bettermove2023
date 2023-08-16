@@ -66,7 +66,7 @@ function widgets_init()
     register_nav_menus(array(
         'primary_nav' => __('Primary Nav', 'cb-bettermove2023'),
         'footer_menu1' => __('Footer Menu 1', 'cb-bettermove2023'),
-        //     'footer_menu2' => __('Footer Menu 2', 'cb-bettermove2023'),
+        'footer_menu2' => __('Footer Menu 2', 'cb-bettermove2023'),
     ));
 
 

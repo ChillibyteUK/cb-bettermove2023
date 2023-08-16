@@ -1,0 +1,23 @@
+.team {
+    &__image {
+        object-fit: cover;
+        aspect-ratio: 1;
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+    &__name {
+        font-size: var(--fs-600);
+        margin-bottom: 0.5rem;
+    }
+    &__role {
+        font-size: var(--fs-400);
+        font-weight: var(--fw-600);
+        margin-bottom: 0.5rem;
+    }
+    &__email a {
+        color: var(--col-secondary-400);
+        &:hover {
+            color: var(--col-primary-400);
+        }
+    }
+}

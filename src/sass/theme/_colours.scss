@@ -11,6 +11,14 @@
     color: var(--col-secondary-400) !important;
 }
 
+.has-green-400-color {
+    color: var(--col-green-400) !important;
+}
+
+.has-red-400-color {
+    color: firebrick !important;
+}
+
 
 .has-primary-400-background-color {
     background-color: var(--col-primary-400);
@@ -22,6 +30,12 @@
 
 .has-grey-200-background-color {
     background-color: var(--col-grey-200);
+}
+.has-grey-400-background-color {
+    background-color: var(--col-grey-400);
+}
+.has-grey-600-background-color {
+    background-color: var(--col-grey-600);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {

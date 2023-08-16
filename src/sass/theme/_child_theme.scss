@@ -46,6 +46,13 @@ a.anchor {
     }
 }
 
+.cols-2 {
+    columns: 2;
+}
+.cols-3 {
+    columns: 3;
+}
+
 .mw-md-65 {
     @media (min-width:992px) {
         max-width: 65ch;

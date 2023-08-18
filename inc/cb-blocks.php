@@ -155,6 +155,15 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false, 'color' => true),
         ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_contact_details',
+            'title'				=> __('CB Contact Details'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_contact_details.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false, 'color' => true),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');

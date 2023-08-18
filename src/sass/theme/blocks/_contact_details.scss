@@ -1,0 +1,62 @@
+.contact_details {
+    &__form {
+        background-color: var(--col-primary-400);
+        padding: 2rem;
+        border: 1px solid var(--col-secondary-400);
+        border-radius: var(--border-sm);
+    }
+    .fa-ul {
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .fa-li {
+        color: var(--col-secondary-400); 
+    }
+    .gform_heading {
+        display: none;
+    }
+    .gfield_label {
+        color: white;
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    textarea,
+    select
+     {
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        &::placeholder {
+            color: white;
+            font-family: var(--ff-title);
+            font-size: var(--fs-300);
+            font-weight: var(--fw-400);
+            text-transform: uppercase;
+        }
+    }
+    option {
+        color: var(--col-primary-400);
+    }
+    button[type=submit] {
+        width: 100%;
+        border: 1px solid var(--col-secondary-400);
+        background-color: var(--col-primary-400);
+        padding-block: 0.5rem;
+        transition: background-color var(--transition);
+        span {
+            color: white;
+        }
+        &:hover {
+            background-color: var(--col-secondary-400);
+        }
+    }
+
+    .gfield_required {
+        color: white;
+    }
+}

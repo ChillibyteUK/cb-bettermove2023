@@ -142,12 +142,12 @@ function cb_dashboard_widget_display()
     ?>
 <div style="display: flex; align-items: center; justify-content: space-around;">
     <img style="width: 50%;"
-        src="<?= get_stylesheet_directory_uri().'/img/lc-full.jpg'; ?>">
+        src="<?= get_stylesheet_directory_uri().'/img/cb-full.jpg'; ?>">
     <a class="button button-primary" target="_blank" rel="noopener nofollow noreferrer"
-        href="mailto:hello@lamcat.co.uk/">Contact</a>
+        href="mailto:hello@chillibyte.co.uk">Contact</a>
 </div>
 <div>
-    <p><strong>Thanks for choosing Lamcat!</strong></p>
+    <p><strong>Thanks for choosing Chillibyte!</strong></p>
     <hr>
     <p>Got a problem with your site, or want to make some changes & need us to take a look for you?</p>
     <p>Use the link above to get in touch and we'll get back to you ASAP.</p>

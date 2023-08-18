@@ -53,6 +53,14 @@
         }
     }
 
+    .cb {
+        content: url(../img/cb.png);
+        transition: all .2s ease-in;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
     .members {
         img {
             height: 50px;

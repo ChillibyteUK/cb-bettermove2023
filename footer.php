@@ -11,7 +11,8 @@ defined('ABSPATH') || exit;
                         src="<?=get_stylesheet_directory_uri()?>/img/bm-logo-white.svg"
                         alt="WH Couriers" class="logo img-fluid mb-4"></a>
                 <div class="mb-2">Bettermove is a trading style of Blootek Ventures Limited.</div>
-                <div>Registered in England &amp; Wales, Company Number 11833187, Registered Address 20-22 Bridge End, Leeds, LS1 4DJ.</div>
+                <div>Registered in England &amp; Wales, Company Number 11833187, Registered Address 20-22 Bridge End,
+                    Leeds, LS1 4DJ.</div>
             </div>
             <div class="col-sm-6 col-lg-3 mb-2 order-3 order-lg-2">
                 <div class="footer__title">Contact</div>
@@ -55,7 +56,8 @@ defined('ABSPATH') || exit;
         <div class="container-xl">
             <div>&copy; <?=date('Y')?> Bettermove
             </div>
-            <div><a href="https://www.chillibyte.co.uk/" target="_blank">CB</a></div>
+            <div><a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
+                    title="Digital Marketing by Chillibyte"></a></div>
         </div>
     </div>
 </footer>

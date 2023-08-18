@@ -21493,6 +21493,13 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   justify-content: space-between;
   font-size: var(--fs-200);
 }
+.footer .cb {
+  content: url(../img/cb.png);
+  transition: all 0.2s ease-in;
+}
+.footer .cb:hover {
+  opacity: 0.8;
+}
 .footer .members img {
   height: 50px;
 }

@@ -1,0 +1,39 @@
+.bg_block {
+    min-height: 400px;
+    padding-block: 2rem;
+    position: relative;
+    isolation: isolate; 
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    display: grid;
+    align-content: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(135deg,var(--col-primary-400) 16%, hsl(var(--hsl-primary-400) / .78) 100%);
+        // mix-blend-mode: multiply;
+        z-index: -1;
+    }
+
+    color: #fff;
+
+    &__content {
+        max-width: 85ch;
+        margin-inline: auto;
+    }
+
+    ul {
+        columns: 2;
+    }
+
+    .fa-li {
+        color: var(--col-secondary-400);
+    }
+
+}

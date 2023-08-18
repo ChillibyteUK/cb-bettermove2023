@@ -22532,6 +22532,38 @@ body .gform_wrapper .gform_footer button {
   transform: translate(50%, -50%);
 }
 
+.bg_block {
+  min-height: 400px;
+  padding-block: 2rem;
+  position: relative;
+  isolation: isolate;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  display: grid;
+  align-content: center;
+  color: #fff;
+}
+.bg_block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, var(--col-primary-400) 16%, hsl(var(--hsl-primary-400)/0.78) 100%);
+  z-index: -1;
+}
+.bg_block__content {
+  max-width: 85ch;
+  margin-inline: auto;
+}
+.bg_block ul {
+  -moz-columns: 2;
+  columns: 2;
+}
+.bg_block .fa-li {
+  color: var(--col-secondary-400);
+}
+
 .wp-block-quote--cb {
   position: relative;
   z-index: 0;

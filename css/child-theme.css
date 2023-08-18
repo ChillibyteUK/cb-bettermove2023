@@ -22216,6 +22216,12 @@ body .gform_wrapper .gform_footer button {
 .text_image img {
   width: 90%;
 }
+.text_image a {
+  color: var(--col-secondary-400);
+}
+.text_image a:hover {
+  color: var(--col-primary-400);
+}
 
 .ten_points__image {
   width: 100px;
@@ -22485,6 +22491,23 @@ body .gform_wrapper .gform_footer button {
 }
 .contact_details .gfield_required {
   color: white;
+}
+
+.form_block .gform_heading {
+  display: none;
+}
+.form_block button[type=submit] {
+  width: 100%;
+  border: 1px solid var(--col-secondary-400);
+  background-color: var(--col-primary-400);
+  padding-block: 0.5rem;
+  transition: background-color var(--transition);
+}
+.form_block button[type=submit] span {
+  color: white;
+}
+.form_block button[type=submit]:hover {
+  background-color: var(--col-secondary-400);
 }
 
 .wp-block-quote--cb {

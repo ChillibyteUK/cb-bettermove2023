@@ -164,6 +164,15 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false, 'color' => true),
         ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_form',
+            'title'				=> __('CB Form Block'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_form.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false, 'color' => true),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');

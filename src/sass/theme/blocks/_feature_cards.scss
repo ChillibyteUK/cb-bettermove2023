@@ -1,0 +1,21 @@
+.feature_cards {
+    &__container {
+        padding-bottom: 50px;
+    }
+    &__card {
+        border: 7px solid var(--col-secondary-200);
+        padding: 2rem;
+        height: calc(100% - 50px);
+        position: relative;
+        margin-inline: 25px;
+        margin-top: 50px;
+    }
+    &__icon {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        right: 0;
+        top: 0;
+        transform: translate(50%,-50%);
+    }
+}

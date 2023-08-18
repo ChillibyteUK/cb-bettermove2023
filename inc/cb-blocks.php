@@ -173,6 +173,15 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false, 'color' => true),
         ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_two_feature_cards',
+            'title'				=> __('CB Two Feature Cards'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_two_feature_cards.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');

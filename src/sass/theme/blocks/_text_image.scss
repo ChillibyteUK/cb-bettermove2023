@@ -2,7 +2,7 @@
     img {
         width: 90%;
     }
-    a {
+    a:not(.btn) {
         color: var(--col-secondary-400);
         &:hover {
             color: var(--col-primary-400);

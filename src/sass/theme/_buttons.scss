@@ -2,7 +2,7 @@
     position: relative;
     border-radius: 0.25rem;
     font-weight: var(--fw-500);
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
     transition: all 0.3s ease;
 
     color: white;
@@ -23,10 +23,10 @@
     }
 }
 
-
 .btn-primary {
     background-color: var(--col-primary-400);
     border-color: var(--col-primary-400);
+    color: white;
     &::after {
         color: var(--col-secondary-400);
     }
@@ -42,6 +42,7 @@
 .btn-secondary {
     background-color: var(--col-secondary-400);
     border-color: var(--col-secondary-400);
+    color: white;
     &::after {
         color: var(--col-primary-400);
     }

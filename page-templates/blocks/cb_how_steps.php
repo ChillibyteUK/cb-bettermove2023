@@ -1,7 +1,7 @@
 <section class="how_steps py-5">
     <div class="container-xl text-center">
-        <div class="preTitle">The better way</div>
-        <h2 class="mb-5">How it works</h2>
+        <div class="preTitle"><?=get_field('pre_title')?></div>
+        <h2 class="mb-5"><?=get_field('title')?></h2>
         <div class="how_steps__grid">
         <?php
         $rowCount = count( get_field('steps') );

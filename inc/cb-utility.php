@@ -297,6 +297,22 @@ function cb_list($field)
     return ob_get_clean();
 }
 
+function cb_icon_list($field, $icon)
+{
+    ob_start();
+    $field = strip_tags($field, '<br />');
+    $bullets = preg_split("/\r\n|\n|\r/", $field);
+    foreach ($bullets as $b) {
+        if ($b == '') {
+            continue;
+        }
+        ?>
+<li><span class="fa-li"><i class="<?=$icon?>"></i></span> <?=$b?></li>
+<?php
+    }
+    return ob_get_clean();
+}
+
 /**
  * formatBytes
  *

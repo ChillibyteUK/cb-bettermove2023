@@ -1,6 +1,6 @@
 <section class="timeline">
     <div class="container-xl">
-        <h2 class="text-center mb-5">How quickly would you like to sell?</h2>
+        <h2 class="text-center mb-5"><?=get_field('title')?></h2>
 
         <div class="timescales">
             <div class="bubbles bubble-1"><span class="subtext">Less than</span><span class="maintext">1 month</span></div>
@@ -19,24 +19,21 @@
 
         <div class="main-wrap">
             <div class="timeline__tab active" id="tab-1">
-                <h3>Bespoke quick sale solution</h3>
+                <h3><?=get_field('title_tab_1')?></h3>
                 <div class="row g-4 mb-4">
                     <div class="col-md-6">
-                        <p>We will be the buyer which means we will physically buy the property from you for cash. We can complete as quickly as you like, typically 7 - 10 days, but are totally flexible to suit your needs and requirements.</p>
-                        <p><strong>Best suited for:</strong> those who value certainty, peace of mind and convenience over getting the best possible price.</p>
+                        <?=get_field('content_tab_1')?>
                         <div class="d-flex gap-4">
                             <div class="pros">
                                 <h4>Pros</h4>
                                 <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Quick - 7 days</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> No fall throughs</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Any property is suitable even un-mortgageable</li>
+                                    <?=cb_icon_list(get_field('pros_tab_1'),'fa-solid fa-check has-green-400-color')?>
                                 </ul>
                             </div>
                             <div class="cons">
                                 <h4>Cons</h4>
                                 <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fa-solid fa-times has-red-400-color"></i></span> You will not get the best possible price</li>
+                                    <?=cb_icon_list(get_field('cons_tab_1'),'fa-solid fa-times has-red-400-color')?>
                                 </ul>
                             </div>
                         </div>
@@ -49,25 +46,21 @@
             </div>
   
             <div class="timeline__tab" id="tab-2">
-                <h3>Auction Route</h3>
+                <h3><?=get_field('title_tab_2')?></h3>
                 <div class="row g-4 mb-4">
                     <div class="col-md-6">
-                        <p>We will encourage competitive bidding amongst our best investors in an auction format. Once the sale ends the buyer exchanges for total peace of mind.</p>
-                        <p><strong>Best suited for:</strong> those that have a property that may be unsuitable for standard mortgage buyers and are prepared to take a risk to get a better price but with less certainty.</p>
+                        <?=get_field('content_tab_2')?>
                         <div class="d-flex gap-4">
                             <div class="pros">
                                 <h4>Pros</h4>
                                 <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> When the sale ends the buyer exchanges</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Legally binding</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Complete peace of mind</li>
+                                    <?=cb_icon_list(get_field('pros_tab_2'),'fa-solid fa-check has-green-400-color')?>
                                 </ul>
                             </div>
                             <div class="cons">
                                 <h4>Cons</h4>
                                 <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fa-solid fa-times has-red-400-color"></i></span> Not all properties are suitable</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-times has-red-400-color"></i></span> Is the slowest method</li>
+                                    <?=cb_icon_list(get_field('cons_tab_2'),'fa-solid fa-times has-red-400-color')?>
                                 </ul>
                             </div>
                         </div>
@@ -80,25 +73,21 @@
             </div>
   
             <div class="timeline__tab" id="tab-3">
-                <h3>Investor Route</h3>
+                <h3><?=get_field('title_tab_3')?></h3>
                 <div class="row g-4 mb-4">
                     <div class="col-md-6">
-                        <p>We will match your property to our extensive network of investors and cash buyers and find you a buyer in 30 days or less.</p>
-                        <p><strong>Best suited for:</strong> those who want to maximize the amount they receive for their property and are prepared to wait a little longer for completion.</p>
+                        <?=get_field('content_tab_3')?>
                         <div class="d-flex gap-4">
                             <div class="pros">
                                 <h4>Pros</h4>
                                 <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Get almost full value</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Much faster than the traditional routes</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-check has-green-400-color"></i></span> Buyer commitment fee</li>
+                                    <?=cb_icon_list(get_field('pros_tab_3'),'fa-solid fa-check has-green-400-color')?>
                                 </ul>
                             </div>
                             <div class="cons">
                                 <h4>Cons</h4>
                                 <ul class="fa-ul">
-                                    <li><span class="fa-li"><i class="fa-solid fa-times has-red-400-color"></i></span> Can take longer than if we were to be the buyer</li>
-                                    <li><span class="fa-li"><i class="fa-solid fa-times has-red-400-color"></i></span> Buyer can still pull out</li>
+                                    <?=cb_icon_list(get_field('cons_tab_3'),'fa-solid fa-times has-red-400-color')?>
                                 </ul>
                             </div>
                         </div>

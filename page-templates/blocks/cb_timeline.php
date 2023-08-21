@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img decoding="async" src="https://www.bettermove.co.uk/wp-content/uploads/2021/12/cashbuy.svg">
+                        <img decoding="async" src="<?=wp_get_attachment_image_url(get_field('image_tab_1'),'full')?>">
                     </div>
                 </div>
                 <a class="btn btn-secondary btn-arrow" onclick="scrollSmoothTo('content')">Learn More</a>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img decoding="async" src="https://www.bettermove.co.uk/wp-content/uploads/2021/12/auction.svg">
+                        <img decoding="async" src="<?=wp_get_attachment_image_url(get_field('image_tab_2'),'full')?>">
                     </div>
                 </div>
                 <a class="btn btn-secondary btn-arrow" href="/online-auctions/">Learn More</a>
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img decoding="async" src="https://www.bettermove.co.uk/wp-content/uploads/2021/12/investor.svg">
+                        <img decoding="async" src="<?=wp_get_attachment_image_url(get_field('image_tab_3'),'full')?>">
                     </div>
                 </div>
                 <a class="btn btn-secondary btn-arrow" href="/how-it-works/">Learn More</a>

@@ -52,12 +52,6 @@ if (get_field('ga_property', 'options')) {
 }
 if (get_field('gtm_property', 'options')) {
     ?>
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-'event': 'lead',
-});
-</script>
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {

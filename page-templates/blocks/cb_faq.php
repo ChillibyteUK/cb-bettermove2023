@@ -1,4 +1,5 @@
 <?php
+
 $class = $block['backgroundColor'] ?? null;
 if ($class) {
     $class = 'has-' . $class . '-background-color';

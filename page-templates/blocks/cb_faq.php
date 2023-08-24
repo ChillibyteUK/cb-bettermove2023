@@ -11,7 +11,7 @@ if ($class) {
         <?php
         if (get_field('intro')) {
             ?>
-        <div class="w-constrained">
+        <div class="w-constrained mb-5">
             <?=get_field('intro')?>
         </div>
             <?php

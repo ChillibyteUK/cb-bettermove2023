@@ -20,7 +20,7 @@
                         alt="icon">
                     <div class="preTitle">Selling</div>
                     <h2 class="three_step_cards__title">I want to sell</h2>
-                    <div class="three_step_cards__content">Let us help you sell your proeprty a better way. Quick, easy
+                    <div class="three_step_cards__content">Let us help you sell your property a better way. Quick, easy
                         and hassle free.</div>
                     <div class="three_step_cards__link">Contact us</div>
                 </a>

@@ -4,11 +4,12 @@
         <h2 class="mb-5"><?=get_field('title')?></h2>
         <div class="how_steps__grid">
         <?php
-        $rowCount = count( get_field('steps') ) ?? null;
+        if (get_field('steps') ?? null) {
+            $rowCount = count( get_field('steps') );
 
-        while(have_rows('steps')) {
-            the_row();
-            ?>
+            while(have_rows('steps')) {
+                the_row();
+                ?>
         <div class="how_steps__card">
             <div class="how_steps__card_inner">
                 <h3><?=get_sub_field('title')?></h3>
@@ -16,7 +17,8 @@
             </div>
             <div class="how_steps__divider"></div>
         </div>
-            <?php
+                <?php
+            }
         }
         ?>
         </div>

@@ -4,7 +4,7 @@
         <h2 class="mb-5"><?=get_field('title')?></h2>
         <div class="how_steps__grid">
         <?php
-        $rowCount = count( get_field('steps') );
+        $rowCount = count( get_field('steps') ) ?? null;
 
         while(have_rows('steps')) {
             the_row();

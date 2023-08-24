@@ -7,7 +7,16 @@ if ($class) {
 <section class="faqs py-5 <?=$class?>">
     <div class="container-xl text-center">
         <div class="preTitle">Got questions?</div>
-        <h2 class="mb-4">Read our FAQs</h2>
+        <h2 class="mb-4"><?=get_field('title')?></h2>
+        <?php
+        if (get_field('intro')) {
+            ?>
+        <div class="w-constrained">
+            <?=get_field('intro')?>
+        </div>
+            <?php
+        }
+        ?>
     </div>
     <div class="container-xl">
     <?php

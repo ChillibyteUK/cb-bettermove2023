@@ -23,12 +23,12 @@
         &__image {
             position: relative;
         }
-        .property-placeholder,
-        &__thumb {
-            aspect-ratio: 4 / 3;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
+    }
+    .property-placeholder,
+    .property__thumb {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }

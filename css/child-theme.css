@@ -22174,7 +22174,8 @@ body .gform_wrapper .gform_footer button {
 .latest_properties .property__image {
   position: relative;
 }
-.latest_properties .property .property-placeholder, .latest_properties .property__thumb {
+.latest_properties .property-placeholder,
+.latest_properties .property__thumb {
   aspect-ratio: 4/3;
   width: 100%;
   -o-object-fit: cover;

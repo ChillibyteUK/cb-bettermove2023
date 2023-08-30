@@ -32,7 +32,7 @@
                         <div class="property__beds"><?=$property->bedrooms?> <?=pluralise($property->bedrooms,'Bedroom')?></div>
                         <div class="property__baths"><?=$property->bathrooms?> <?=pluralise($property->bathrooms,'Bathroom')?></div>
                     </div>
-                    <div class="p-2 text-center"><a href="<?=get_the_permalink()?>" class="btn btn-primary">More details</a></div>
+                    <div class="p-2 text-center"><a href="<?=get_the_permalink()?>" class="btn btn-primary w-100">More details</a></div>
                 </div>
             </div>
         <?php

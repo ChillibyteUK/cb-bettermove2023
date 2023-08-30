@@ -12,7 +12,7 @@
         ));
         while ($q->have_posts()) {
             $q->the_post();
-            var_dump($post);
+            var_dump($q);
         ?>
             <div class="col-md-4">
                 <div class="property__card">

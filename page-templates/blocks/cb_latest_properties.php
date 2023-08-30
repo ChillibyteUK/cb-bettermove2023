@@ -13,6 +13,7 @@
         while ($q->have_posts()) {
             $q->the_post();
             $prop = get_property($q->get_the_ID());
+            var_dump($prop);
         ?>
             <div class="col-md-4">
                 <div class="property__card">

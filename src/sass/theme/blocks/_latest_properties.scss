@@ -10,6 +10,7 @@
             left: 0;
             padding: 0.5rem;
             background-color: var(--col-secondary-400);
+            color: #fff;
         }
         &__price {
             position: absolute;
@@ -17,12 +18,14 @@
             right: 0;
             padding: 0.5rem;
             background-color: var(--col-primary-400);
+            color: #fff;
         }
         &__image {
             position: relative;
         }
+        .property-placeholder,
         &__thumb {
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 4 / 3;
             width: 100%;
             object-fit: cover;
             object-position: center;

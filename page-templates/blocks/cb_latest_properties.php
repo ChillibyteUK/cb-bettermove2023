@@ -19,10 +19,15 @@
                 <div class="property__card">
                     <div class="property__image">
                         <div class="property__flag">For Sale</div>
-                        <div class="property__price"><?=$property->get_formatted_price()?><br>sub</div>
+                        <div class="property__price">
+                            <?=$property->get_formatted_price()?>
+                            <?=$property->get_price_qualifier()?>
+                        </div>
                         <?=propertyhive_get_property_thumbnail('large','property__thumb')?>
                     </div>
                     <?=get_the_title()?>
+                    <?=$property->bedrooms?>
+                    <?=$property->bathrooms?>
                 </div>
             </div>
         <?php

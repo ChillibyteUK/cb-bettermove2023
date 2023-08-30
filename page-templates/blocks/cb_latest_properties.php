@@ -12,14 +12,14 @@
         ));
         while ($q->have_posts()) {
             $q->the_post();
-            $prop = get_property($q->get_the_ID());
-            var_dump($prop);
+            global $property;
+            var_dump($property);
         ?>
             <div class="col-md-4">
                 <div class="property__card">
                     <div class="property__image">
                         <div class="property__flag">For Sale</div>
-                        <div class="property__price"><?=$prop->get_formatted_price()?><br>sub</div>
+                        <div class="property__price"><?=$property->get_formatted_price()?><br>sub</div>
                         <?=propertyhive_get_property_thumbnail('large','property__thumb')?>
                     </div>
                     <?=get_the_title()?>

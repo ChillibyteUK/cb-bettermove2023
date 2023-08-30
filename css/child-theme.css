@@ -22158,7 +22158,7 @@ body .gform_wrapper .gform_footer button {
 .latest_properties .property__card {
   background-color: #fff;
   display: grid;
-  grid-template-rows: 1fr 1fr auto;
+  grid-template-rows: auto 1fr auto;
 }
 .latest_properties .property__image {
   position: relative;
@@ -22185,7 +22185,7 @@ body .gform_wrapper .gform_footer button {
 .latest_properties .property__meta {
   display: flex;
   justify-content: space-between;
-  padding-top: 0.5rem;
+  padding: 0.5rem;
 }
 .latest_properties .property__beds, .latest_properties .property__baths {
   display: flex;

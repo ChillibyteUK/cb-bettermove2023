@@ -5,15 +5,20 @@
             <h2>Our latest properties</h2>
         </div>
         <div class="row g-5 mb-5">
+        <?php
+        $q = new WP_Query(array(
+            'post_type' => 'property',
+            'posts_per_page' => 3
+        ));
+        while ($q->have_posts()) {
+            $q->the_post();
+        ?>
             <div class="col-md-4">
-                ONE
+                <?=get_the_title()?>
             </div>
-            <div class="col-md-4">
-                TWO
-            </div>
-            <div class="col-md-4">
-                THREE
-            </div>
+        <?php
+        }
+        ?>
         </div>
         <div class="text-center">
             <a href="/properties/" class="btn btn-primary btn-arrow">Search properties</a>

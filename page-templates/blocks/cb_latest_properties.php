@@ -12,8 +12,9 @@
         ));
         while ($q->have_posts()) {
             $q->the_post();
-            $me = get_post_meta($q->ID);
-            var_dump($me);
+            $th = propertyhive_get_property_thumbnail();
+            var_dump($th);
+
         ?>
             <div class="col-md-4">
                 <div class="property__card">

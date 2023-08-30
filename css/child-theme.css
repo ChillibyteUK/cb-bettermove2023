@@ -22170,6 +22170,8 @@ body .gform_wrapper .gform_footer button {
 .latest_properties .property__image {
   position: relative;
   overflow: hidden;
+  border-top-left-radius: var(--border-xs);
+  border-top-right-radius: var(--border-xs);
 }
 .latest_properties .property__flag {
   position: absolute;
@@ -22178,7 +22180,6 @@ body .gform_wrapper .gform_footer button {
   padding: 0.5rem;
   background-color: var(--col-secondary-400);
   color: #fff;
-  border-top-left-radius: var(--border-xs);
 }
 .latest_properties .property__price {
   position: absolute;
@@ -22187,7 +22188,6 @@ body .gform_wrapper .gform_footer button {
   padding: 0.5rem;
   background-color: var(--col-primary-400);
   color: #fff;
-  border-top-right-radius: var(--border-xs);
 }
 .latest_properties .property__title {
   font-size: var(--fs-500);

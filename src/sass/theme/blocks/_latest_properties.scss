@@ -3,6 +3,7 @@
 
     .property {
         &__card {
+            height: 100%;
             border-radius: var(--border-xs);
             background-color: #fff;
             display: grid;

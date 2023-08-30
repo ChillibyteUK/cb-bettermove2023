@@ -22156,6 +22156,7 @@ body .gform_wrapper .gform_footer button {
   background-color: var(--col-secondary-200);
 }
 .latest_properties .property__card {
+  height: 100%;
   border-radius: var(--border-xs);
   background-color: #fff;
   display: grid;

@@ -12,7 +12,8 @@
         ));
         while ($q->have_posts()) {
             $q->the_post();
-            var_dump($q);
+            $me = get_post($q->ID);
+            var_dump($me);
         ?>
             <div class="col-md-4">
                 <div class="property__card">

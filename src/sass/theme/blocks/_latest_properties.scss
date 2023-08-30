@@ -20,6 +20,7 @@
         }
         &__image {
             position: relative;
+            overflow: hidden;
         }
         &__flag {
             position: absolute;
@@ -37,7 +38,9 @@
             background-color: var(--col-primary-400);
             color: #fff;
         }
-
+        &__title {
+            font-size: var(--fs-500);
+        }
         &__detail {
             padding: 0.5rem;
         }

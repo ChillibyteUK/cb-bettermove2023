@@ -26,12 +26,13 @@
                         <?=propertyhive_get_property_thumbnail('large','property__thumb')?>
                     </div>
                     <div class="property__detail">
-                        <h3 class="h4"><?=get_the_title()?></h3>
+                        <h3 class="property__title"><?=get_the_title()?></h3>
                     </div>
                     <div class="property__meta">
                         <div class="property__beds"><?=$property->bedrooms?> <?=pluralise($property->bedrooms,'Bedroom')?></div>
                         <div class="property__baths"><?=$property->bathrooms?> <?=pluralise($property->bathrooms,'Bathroom')?></div>
                     </div>
+                    <a href="<?=get_the_permalink()?>" class="btn btn-primary">More details</a>
                 </div>
             </div>
         <?php

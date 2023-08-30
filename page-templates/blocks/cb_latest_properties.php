@@ -18,7 +18,7 @@
                     <div class="property__image">
                         <div class="property__flag">For Sale</div>
                         <div class="property__price">PRICE<br>sub</div>
-                        <?=propertyhive_get_property_thumbnail()?>
+                        <?=propertyhive_get_property_thumbnail('large','property__thumb')?>
                     </div>
                     <?=get_the_title()?>
                 </div>

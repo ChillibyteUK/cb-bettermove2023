@@ -16,7 +16,7 @@
             // var_dump($property);
         ?>
             <div class="col-md-4">
-                <div class="property__card">
+                <a class="property__card" href="<?=get_the_permalink()?>">
                     <div class="property__image">
                         <div class="property__flag">For Sale</div>
                         <div class="property__price">
@@ -32,8 +32,7 @@
                         <div class="property__beds"><?=$property->bedrooms?> <?=pluralise($property->bedrooms,'Bedroom')?></div>
                         <div class="property__baths"><?=$property->bathrooms?> <?=pluralise($property->bathrooms,'Bathroom')?></div>
                     </div>
-                    <div class="p-2 text-center"><a href="<?=get_the_permalink()?>" class="btn btn-primary w-100">More details</a></div>
-                </div>
+                </a>
             </div>
         <?php
         }

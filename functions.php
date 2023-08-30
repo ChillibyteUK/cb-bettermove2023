@@ -109,3 +109,13 @@ function understrap_child_customize_controls_js()
     );
 }
 add_action('customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js');
+
+/**
+ * Set 'with_front' to false for the 'experts' post type.
+ */
+add_filter( 'register_post_type_args', function( $args, $post_type )
+{
+    if( 'property' === $post_type && is_array( $args ) )
+            $args['rewrite']['with_front'] = false;
+    return $args;
+}, 99, 2 );

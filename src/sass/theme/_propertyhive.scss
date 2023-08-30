@@ -1,0 +1,329 @@
+.summary-box {
+    background-color: #0e4254;
+    border: solid 1px #e9988e;
+}
+
+.main-feature-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.summary-col {
+    text-align: center;
+}
+
+.summary-box h5 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.summary-box h3 {
+    color: #F59389;
+}
+
+.feature-row {
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 1px white;
+}
+
+.summary-col-4 {
+    text-align: center;
+    color: white;
+}
+
+.property_actions ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -20px;
+    list-style: none;
+}
+
+.property_actions ul li {
+    width: 33%;
+}
+
+li.action-make-enquiry {
+    display: none;
+}
+
+.property_actions ul li a {
+    background-color: #0e4254;
+    border: solid 1px #f59389;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    transition: 300ms;
+}
+
+.summary-contents br {
+    display: none;
+}
+
+.drag-margin {
+    margin-top: -60px;
+}
+
+.contact-holder {
+    z-index: 9;
+}
+
+.contact-holder-inner {
+    top: 150px;
+}
+
+.flag {
+    position: absolute;
+    z-index: 99;
+    text-transform: uppercase;
+    font-size: 20px!important;
+    box-sizing: border-box;
+    padding: 7px 20px;
+    top: 15px;
+    left: 0px;
+    color: #FFF;
+    background: #E9988E!important;
+    padding: 10px!important;
+}
+
+form.property-search-form.property-search-form-default.clear {
+    margin-top: -60px;
+    position: relative;
+    z-index: 8888;
+}
+
+form.property-search-form {
+    background-color: #0c4254;
+    padding: 2%;
+    border: 1px solid #e9988e;
+}
+
+form.property-search-form.property-search-form-default.clear div {
+    width: 20%!important;
+    text-align: center;
+    color: white;
+}
+
+input#address_keyword, select#minimum_price, select#minimum_price, select#maximum_price, select#minimum_bathrooms, select#minimum_bedrooms, select#property_type {
+    height: 40px!important;
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: 300;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    background-color: rgb(255 255 255 / 37%);
+}
+
+form.property-search-form.property-search-form-default.clear div input {
+    width: 100%;
+}
+
+form.property-search-form.property-search-form-default input[type="submit"] {
+    height: 40px;
+    box-shadow: none!important;
+    background-color: #0c4254;
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: 300;
+    color: white;
+    border: solid 1px #e9988e!important;
+    padding: 7px 15px;
+    margin-top: 39px;
+    transition: 300ms;
+}
+
+.pink-bg {
+    background: rgb(245 148 138 / 38%);
+}
+
+form.propertyhive-ordering {
+    text-align: right;
+    width: 50%;
+    float: right;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+p.propertyhive-result-count {
+    width: 50%;
+    float: left;
+    margin-top: 50px;
+}
+
+select.orderby {
+    background-color: white;
+    height: 40px;
+    font-family: poppins;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.orderby, .woocommerce div.product form.cart .variations td select {
+    background-color: #ececec;
+    border-radius: 3px;
+    border: 0;
+    color: #666!important;
+    font-size: 12px;
+    padding: 4px 8px;
+    font-weight: 500;
+    font-family: Open Sans,Arial,sans-serif;
+}
+
+.propertyhive ul.properties li .details {
+    width: 100%;
+    float: none;
+    padding: 5%;
+    background-color: white;
+    margin-top: -10px;
+}
+
+.propertyhive ul.properties li .thumbnail {
+    width: 100%;
+    float: none;
+}
+
+.propertyhive ul.properties li {
+    border-bottom: none;
+}
+
+.propertyhive ul.properties li .details {
+    width: 100%;
+    float: none;
+    padding: 5%;
+    background-color: white;
+    margin-top: -10px;
+}
+
+.details {
+    min-height: 380px;
+}
+
+.details h3 {
+    font-size: 25px;
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    font-size: 20px;
+    color: white;
+    background-color: #0e4254;
+    padding: 10px;
+}
+
+.archive .summary, .home .summary {
+    height: 135px;
+    overflow: hidden;
+}
+
+.actions {
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    width: 90%;
+}
+
+.rooms {
+    position: absolute;
+    bottom: 100px;
+    width: 90%;
+}
+
+.rooms {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.room.room-bedrooms, .room.room-bathrooms {
+    position: relative;
+    margin-left: 30px;
+}
+
+.room.room-bedrooms {
+    margin-left: 20px!important;
+}
+
+.room.room-receptions {
+    display: none;
+}
+
+.property {
+    position: relative;
+}
+
+.actions a {
+    transition: 300ms;
+    background-color: #0E4254;
+    border-radius: 3px;
+    color: white;
+    padding: 7px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.room.room-bedrooms::before {
+    position: absolute;
+    left: -30px;
+    top: 15%;
+    content: '';
+    margin-right: 5px;
+    background: url(/wp-content/uploads/2023/08/bed-4.svg);
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.room.room-bathrooms::before {
+    position: absolute;
+    left: -30px;
+    top: 15%;
+    content: '';
+    margin-right: 5px;
+    background: url(/wp-content/uploads/2023/08/bathroom.svg);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.propertyhive-pagination {
+    background-color: white;
+    width: 20%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.propertyhive-pagination ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.page-numbers li {
+    padding: 5px;
+}
+
+.propertyhive-pagination {
+    margin-bottom: 0 !important;
+}

@@ -12,7 +12,7 @@
         ));
         while ($q->have_posts()) {
             $q->the_post();
-            $me = get_post($q->ID);
+            $me = get_post_meta($q->ID);
             var_dump($me);
         ?>
             <div class="col-md-4">

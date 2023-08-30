@@ -22177,9 +22177,13 @@ body .gform_wrapper .gform_footer button {
 .latest_properties .property__image {
   position: relative;
 }
+.latest_properties .property__detail {
+  padding: 0.5rem;
+}
 .latest_properties .property__meta {
   display: flex;
   justify-content: space-between;
+  padding-top: 0.5rem;
 }
 .latest_properties .property__beds, .latest_properties .property__baths {
   display: flex;

@@ -24,9 +24,13 @@
         &__image {
             position: relative;
         }
+        &__detail {
+            padding: 0.5rem;
+        }
         &__meta {
             display: flex;
             justify-content: space-between;
+            padding-top: 0.5rem;
         }
         &__beds,
         &__baths {

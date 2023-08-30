@@ -29,7 +29,7 @@
                         <h3 class="property__title"><?=get_the_title()?></h3>
                         <?php
                         $dom = new DOMDocument();
-                        $dom->loadHTML($property["post_excerpt"]);
+                        $dom->loadHTML($property->post_excerpt);
                         
                         $paragraphs = $dom->getElementsByTagName('p');
                         

@@ -129,31 +129,31 @@ do_action('wp_body_open');
             </span>
         </div>
     </div>
-    <div id="navigation" class="sticky-top">
-        <div class="container-xl">
-            <div id="wrapperNavbar">
+    <div id="wrapperNavbar" class="sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-xl py-2 nav-top">
                 <a href="/" class="logo" aria-label="Home"></a>
-                <nav class="navbar navbar-expand-lg p-0 w-100">
-                    <div class="collapse navbar-collapse" id="navbar">
+                <div class="button-container d-lg-none">
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                        aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>                
+                <div class="collapse navbar-collapse" id="navbar">
                         <?php
     wp_nav_menu(
         array(
-'theme_location'  => 'primary_nav',
-'container_class' => 'container-xl w-100',
-'menu_class'      => 'navbar-nav justify-content-end gap-4',
-'fallback_cb'     => '',
-'menu_id'         => 'navbarr',
-'depth'           => 3,
-'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-)
+    'theme_location'  => 'primary_nav',
+    'container_class' => 'container-xl w-100',
+    'menu_class'      => 'navbar-nav justify-content-end gap-4',
+    'fallback_cb'     => '',
+    'menu_id'         => 'navbarr',
+    'depth'           => 3,
+    'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+    )
     );
-?>
-                    </div>
-                </nav>
-                <button class="d-lg-none navbar-toggle collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                </button>
+    ?>
+                </div>
             </div>
-        </div>
+        </nav>
     </div>

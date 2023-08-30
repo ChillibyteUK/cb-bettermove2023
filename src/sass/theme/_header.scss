@@ -36,12 +36,14 @@
     }
 }
 
-#navigation {
+#wrapperNavbar {
+
     background-color: #fff;
     text-transform: uppercase;
     font-size: var(--fs-300);
 
     font-family: var(--ff-title);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
     a {
         color: var(--col-primary-400);
@@ -50,11 +52,10 @@
         }
     }
 
-    #wrapperNavbar {
-        display: flex;
-        padding-block: 1rem;
-        justify-content: space-between;
-    }
+    // #wrapperNavbar {
+    //     display: flex;
+    //     padding-block: 1rem;
+    //     justify-content: space-between;
 
     .logo {
         background-position: center;

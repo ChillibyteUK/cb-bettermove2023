@@ -22155,6 +22155,31 @@ body .gform_wrapper .gform_footer button {
 .latest_properties {
   background-color: var(--col-secondary-200);
 }
+.latest_properties .property__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: var(--col-secondary-400);
+}
+.latest_properties .property__price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  background-color: var(--col-primary-400);
+}
+.latest_properties .property__image {
+  position: relative;
+}
+.latest_properties .property__thumb {
+  aspect-ratio: 16/9;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
 
 .contact_block {
   background-image: url(../img/contact-shutterstock_547444582_resized.jpg);

@@ -1,3 +1,31 @@
 .latest_properties {
     background-color: var(--col-secondary-200);
+
+    .property {
+        &__card {
+        }
+        &__flag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0.5rem;
+            background-color: var(--col-secondary-400);
+        }
+        &__price {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.5rem;
+            background-color: var(--col-primary-400);
+        }
+        &__image {
+            position: relative;
+        }
+        &__thumb {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
 }

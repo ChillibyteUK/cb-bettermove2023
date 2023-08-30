@@ -8,20 +8,17 @@
         <?php
         $q = new WP_Query(array(
             'post_type' => 'property',
-            'posts_per_page' => 1
+            'posts_per_page' => 3
         ));
         while ($q->have_posts()) {
             $q->the_post();
-            $th = propertyhive_get_property_thumbnail();
-            var_dump($th);
-
         ?>
             <div class="col-md-4">
                 <div class="property__card">
                     <div class="property__image">
                         <div class="property__flag">For Sale</div>
                         <div class="property__price">PRICE<br>sub</div>
-                        <img src="" alt="">
+                        <?=propertyhive_get_property_thumbnail()?>
                     </div>
                     <?=get_the_title()?>
                 </div>

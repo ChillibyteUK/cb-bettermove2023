@@ -13,7 +13,6 @@
         while ($q->have_posts()) {
             $q->the_post();
             global $property;
-            var_dump($property);
         ?>
             <div class="col-md-4">
                 <a class="property__card" href="<?=get_the_permalink()?>">

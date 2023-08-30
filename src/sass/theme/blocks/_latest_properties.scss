@@ -4,6 +4,11 @@
     .property {
         &__card {
             background-color: #fff;
+            display: grid;
+            grid-template-rows: 1fr 1fr auto;
+        }
+        &__image {
+            position: relative;
         }
         &__flag {
             position: absolute;
@@ -21,9 +26,7 @@
             background-color: var(--col-primary-400);
             color: #fff;
         }
-        &__image {
-            position: relative;
-        }
+
         &__detail {
             padding: 0.5rem;
         }

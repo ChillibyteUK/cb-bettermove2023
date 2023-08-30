@@ -22157,6 +22157,11 @@ body .gform_wrapper .gform_footer button {
 }
 .latest_properties .property__card {
   background-color: #fff;
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+}
+.latest_properties .property__image {
+  position: relative;
 }
 .latest_properties .property__flag {
   position: absolute;
@@ -22173,9 +22178,6 @@ body .gform_wrapper .gform_footer button {
   padding: 0.5rem;
   background-color: var(--col-primary-400);
   color: #fff;
-}
-.latest_properties .property__image {
-  position: relative;
 }
 .latest_properties .property__detail {
   padding: 0.5rem;

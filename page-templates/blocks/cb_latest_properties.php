@@ -13,7 +13,7 @@
         while ($q->have_posts()) {
             $q->the_post();
             global $property;
-            var_dump($property);
+            // var_dump($property);
         ?>
             <div class="col-md-4">
                 <div class="property__card">
@@ -26,8 +26,10 @@
                         <?=propertyhive_get_property_thumbnail('large','property__thumb')?>
                     </div>
                     <?=get_the_title()?>
-                    <?=$property->bedrooms?>
-                    <?=$property->bathrooms?>
+                    <div class="property__meta">
+                        <div class="property__beds"><?=$property->bedrooms?></div>
+                        <div class="property__baths"><?=$property->bathrooms?></div>
+                    </div>
                 </div>
             </div>
         <?php

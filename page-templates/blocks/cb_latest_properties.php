@@ -8,13 +8,21 @@
         <?php
         $q = new WP_Query(array(
             'post_type' => 'property',
-            'posts_per_page' => 3
+            'posts_per_page' => 1
         ));
         while ($q->have_posts()) {
             $q->the_post();
+            var_dump($post);
         ?>
             <div class="col-md-4">
-                <?=get_the_title()?>
+                <div class="property__card">
+                    <div class="property__image">
+                        <div class="property__flag">For Sale</div>
+                        <div class="property__price">PRICE<br>sub</div>
+                        <img src="" alt="">
+                    </div>
+                    <?=get_the_title()?>
+                </div>
             </div>
         <?php
         }

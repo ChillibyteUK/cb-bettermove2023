@@ -29,6 +29,7 @@
             padding: 0.5rem;
             background-color: var(--col-secondary-400);
             color: #fff;
+            border-top-left-radius: var(--border-xs);
         }
         &__price {
             position: absolute;
@@ -37,6 +38,7 @@
             padding: 0.5rem;
             background-color: var(--col-primary-400);
             color: #fff;
+            border-top-right-radius: var(--border-xs);
         }
         &__title {
             font-size: var(--fs-500);

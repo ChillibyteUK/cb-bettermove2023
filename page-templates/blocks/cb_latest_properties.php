@@ -27,6 +27,17 @@
                     </div>
                     <div class="property__detail">
                         <h3 class="property__title"><?=get_the_title()?></h3>
+                        <?php
+                        $dom = new DOMDocument();
+                        $dom->loadHTML($property["post_excerpt"]);
+                        
+                        $paragraphs = $dom->getElementsByTagName('p');
+                        
+                        if ($paragraphs->length > 0) {
+                            $firstParagraph = $paragraphs->item(0)->textContent;
+                            echo $firstParagraph;
+                        }
+                        ?>
                     </div>
                     <div class="property__meta">
                         <div class="property__beds"><?=$property->bedrooms?> <?=pluralise($property->bedrooms,'Bedroom')?></div>

@@ -27,8 +27,8 @@
                     </div>
                     <?=get_the_title()?>
                     <div class="property__meta">
-                        <div class="property__beds"><?=$property->bedrooms?></div>
-                        <div class="property__baths"><?=$property->bathrooms?></div>
+                        <div class="property__beds"><?=$property->bedrooms?> <?=pluralise($property->bedrooms,'Bedroom')?></div>
+                        <div class="property__baths"><?=$property->bathrooms?> <?=pluralise($property->bathrooms,'Bathroom')?></div>
                     </div>
                 </div>
             </div>

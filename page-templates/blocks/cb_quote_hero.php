@@ -2,16 +2,20 @@
 $bg = wp_get_attachment_image_url(get_field('background'), 'full');
 ?>
 
-<section class="quote_hero" style="background-image:url(<?=$bg?>)">
-    <div class="container-xl py-5">
-        <div class="preTitle text-center">Selling your property?</div>
-        <h1 class="text-center mb-5">
-            <?=get_field('title')?>
+<section class="quote_hero">
+    <div class="container-xl py-5" style="background-image:url(<?=$bg?>)">
+        <h1 class="mb-5">
+            <?=get_field('title')?><br>
+            <span class="smaller">to sell your property</span>
         </h1>
-        <div class="pre_form">Get a <span>cash offer</span> on your home today!</div>
+        <!-- <div class="pre_form">Get a <span>cash offer</span> on your home today!</div> -->
         <div class="hero_form">
             <?=do_shortcode('[gravityform id="1"]')?>
         </div>
+    </div>
+</section>
+<div class="quote_hero__usp">
+    <div class="container-xl py-5">
         <div class="icon_grid">
             <div>
                 <img

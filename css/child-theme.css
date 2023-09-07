@@ -2605,8 +2605,8 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .quote_block .btn-check[disabled] + button[type=submit], .quote_hero .hero_form .btn-check[disabled] + button[type=submit], .fieldset-cf7mls-wrapper .btn-check[disabled] + button,
-.fieldset-cf7mls-wrapper .btn-check[disabled] + .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn .btn-check[disabled] + a, .btn-check:disabled + .btn, .quote_block .btn-check:disabled + button[type=submit], .quote_hero .hero_form .btn-check:disabled + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:disabled + button,
+.btn-check[disabled] + .btn, .quote_block .btn-check[disabled] + button[type=submit], .fieldset-cf7mls-wrapper .btn-check[disabled] + button,
+.fieldset-cf7mls-wrapper .btn-check[disabled] + .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn .btn-check[disabled] + a, .btn-check:disabled + .btn, .quote_block .btn-check:disabled + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:disabled + button,
 .fieldset-cf7mls-wrapper .btn-check:disabled + .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn .btn-check:disabled + a {
   pointer-events: none;
   filter: none;
@@ -2808,13 +2808,13 @@ textarea.form-control-lg {
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .quote_block button[type=submit], .quote_block .input-group button[type=submit], .input-group .quote_hero .hero_form button[type=submit], .quote_hero .hero_form .input-group button[type=submit], .input-group .fieldset-cf7mls-wrapper button, .fieldset-cf7mls-wrapper .input-group button,
+.input-group .btn, .input-group .quote_block button[type=submit], .quote_block .input-group button[type=submit], .input-group .fieldset-cf7mls-wrapper button, .fieldset-cf7mls-wrapper .input-group button,
 .input-group .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner,
 .fieldset-cf7mls-wrapper .input-group .wpcf7-form-control.wpcf7-submit.has-spinner, .input-group #wrapperNavbar .navBtn a, #wrapperNavbar .navBtn .input-group a {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .quote_block button[type=submit]:focus, .quote_block .input-group button[type=submit]:focus, .input-group .quote_hero .hero_form button[type=submit]:focus, .quote_hero .hero_form .input-group button[type=submit]:focus, .input-group .fieldset-cf7mls-wrapper button:focus, .fieldset-cf7mls-wrapper .input-group button:focus,
+.input-group .btn:focus, .input-group .quote_block button[type=submit]:focus, .quote_block .input-group button[type=submit]:focus, .input-group .fieldset-cf7mls-wrapper button:focus, .fieldset-cf7mls-wrapper .input-group button:focus,
 .input-group .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:focus,
 .fieldset-cf7mls-wrapper .input-group .wpcf7-form-control.wpcf7-submit.has-spinner:focus, .input-group #wrapperNavbar .navBtn a:focus, #wrapperNavbar .navBtn .input-group a:focus {
   z-index: 3;
@@ -2841,7 +2841,6 @@ textarea.form-control-lg {
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
 .quote_block .input-group-lg > button[type=submit],
-.quote_hero .hero_form .input-group-lg > button[type=submit],
 .fieldset-cf7mls-wrapper .input-group-lg > button,
 .fieldset-cf7mls-wrapper .input-group-lg > .wpcf7-form-control.wpcf7-submit.has-spinner,
 #wrapperNavbar .navBtn .input-group-lg > a {
@@ -2856,7 +2855,6 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
 .quote_block .input-group-sm > button[type=submit],
-.quote_hero .hero_form .input-group-sm > button[type=submit],
 .fieldset-cf7mls-wrapper .input-group-sm > button,
 .fieldset-cf7mls-wrapper .input-group-sm > .wpcf7-form-control.wpcf7-submit.has-spinner,
 #wrapperNavbar .navBtn .input-group-sm > a {
@@ -3092,7 +3090,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn, .quote_block button[type=submit], .quote_hero .hero_form button[type=submit], .fieldset-cf7mls-wrapper button,
+.btn, .quote_block button[type=submit], .fieldset-cf7mls-wrapper button,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn a {
   display: inline-block;
   font-weight: 400;
@@ -3114,70 +3112,70 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .quote_block button[type=submit], .quote_hero .hero_form button[type=submit], .fieldset-cf7mls-wrapper button,
+  .btn, .quote_block button[type=submit], .fieldset-cf7mls-wrapper button,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn a {
     transition: none;
   }
 }
-.btn:hover, .quote_block button[type=submit]:hover, .quote_hero .hero_form button[type=submit]:hover, .fieldset-cf7mls-wrapper button:hover,
+.btn:hover, .quote_block button[type=submit]:hover, .fieldset-cf7mls-wrapper button:hover,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:hover, #wrapperNavbar .navBtn a:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .quote_block .btn-check:focus + button[type=submit], .quote_hero .hero_form .btn-check:focus + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:focus + button,
-.fieldset-cf7mls-wrapper .btn-check:focus + .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn .btn-check:focus + a, .btn:focus, .quote_block button[type=submit]:focus, .quote_hero .hero_form button[type=submit]:focus, .fieldset-cf7mls-wrapper button:focus,
+.btn-check:focus + .btn, .quote_block .btn-check:focus + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:focus + button,
+.fieldset-cf7mls-wrapper .btn-check:focus + .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn .btn-check:focus + a, .btn:focus, .quote_block button[type=submit]:focus, .fieldset-cf7mls-wrapper button:focus,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:focus, #wrapperNavbar .navBtn a:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .quote_block button[type=submit]:disabled, .quote_hero .hero_form button[type=submit]:disabled, .fieldset-cf7mls-wrapper button:disabled,
-.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:disabled, #wrapperNavbar .navBtn a:disabled, .btn.disabled, .quote_block button.disabled[type=submit], .quote_hero .hero_form button.disabled[type=submit], .fieldset-cf7mls-wrapper button.disabled,
-.fieldset-cf7mls-wrapper .disabled.wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn a.disabled, fieldset:disabled .btn, fieldset:disabled .quote_block button[type=submit], .quote_block fieldset:disabled button[type=submit], fieldset:disabled .quote_hero .hero_form button[type=submit], .quote_hero .hero_form fieldset:disabled button[type=submit], fieldset:disabled .fieldset-cf7mls-wrapper button, .fieldset-cf7mls-wrapper fieldset:disabled button,
+.btn:disabled, .quote_block button[type=submit]:disabled, .fieldset-cf7mls-wrapper button:disabled,
+.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:disabled, #wrapperNavbar .navBtn a:disabled, .btn.disabled, .quote_block button.disabled[type=submit], .fieldset-cf7mls-wrapper button.disabled,
+.fieldset-cf7mls-wrapper .disabled.wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn a.disabled, fieldset:disabled .btn, fieldset:disabled .quote_block button[type=submit], .quote_block fieldset:disabled button[type=submit], fieldset:disabled .fieldset-cf7mls-wrapper button, .fieldset-cf7mls-wrapper fieldset:disabled button,
 fieldset:disabled .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner,
 .fieldset-cf7mls-wrapper fieldset:disabled .wpcf7-form-control.wpcf7-submit.has-spinner, fieldset:disabled #wrapperNavbar .navBtn a, #wrapperNavbar .navBtn fieldset:disabled a {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary, .quote_hero .hero_form button[type=submit], .fieldset-cf7mls-wrapper button,
+.btn-primary, .fieldset-cf7mls-wrapper button,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-primary:hover, .quote_hero .hero_form button[type=submit]:hover, .fieldset-cf7mls-wrapper button:hover,
+.btn-primary:hover, .fieldset-cf7mls-wrapper button:hover,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:hover {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
-.btn-check:focus + .btn-primary, .quote_hero .hero_form .btn-check:focus + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:focus + button,
-.fieldset-cf7mls-wrapper .btn-check:focus + .wpcf7-form-control.wpcf7-submit.has-spinner, .btn-primary:focus, .quote_hero .hero_form button[type=submit]:focus, .fieldset-cf7mls-wrapper button:focus,
+.btn-check:focus + .btn-primary, .fieldset-cf7mls-wrapper .btn-check:focus + button,
+.fieldset-cf7mls-wrapper .btn-check:focus + .wpcf7-form-control.wpcf7-submit.has-spinner, .btn-primary:focus, .fieldset-cf7mls-wrapper button:focus,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:focus {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-check:checked + .btn-primary, .quote_hero .hero_form .btn-check:checked + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:checked + button,
-.fieldset-cf7mls-wrapper .btn-check:checked + .wpcf7-form-control.wpcf7-submit.has-spinner, .btn-check:active + .btn-primary, .quote_hero .hero_form .btn-check:active + button[type=submit], .fieldset-cf7mls-wrapper .btn-check:active + button,
-.fieldset-cf7mls-wrapper .btn-check:active + .wpcf7-form-control.wpcf7-submit.has-spinner, .btn-primary:active, .quote_hero .hero_form button[type=submit]:active, .fieldset-cf7mls-wrapper button:active,
-.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:active, .btn-primary.active, .quote_hero .hero_form button.active[type=submit], .fieldset-cf7mls-wrapper button.active,
-.fieldset-cf7mls-wrapper .active.wpcf7-form-control.wpcf7-submit.has-spinner, .show > .btn-primary.dropdown-toggle, .quote_hero .hero_form .show > button.dropdown-toggle[type=submit], .fieldset-cf7mls-wrapper .show > button.dropdown-toggle,
+.btn-check:checked + .btn-primary, .fieldset-cf7mls-wrapper .btn-check:checked + button,
+.fieldset-cf7mls-wrapper .btn-check:checked + .wpcf7-form-control.wpcf7-submit.has-spinner, .btn-check:active + .btn-primary, .fieldset-cf7mls-wrapper .btn-check:active + button,
+.fieldset-cf7mls-wrapper .btn-check:active + .wpcf7-form-control.wpcf7-submit.has-spinner, .btn-primary:active, .fieldset-cf7mls-wrapper button:active,
+.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:active, .btn-primary.active, .fieldset-cf7mls-wrapper button.active,
+.fieldset-cf7mls-wrapper .active.wpcf7-form-control.wpcf7-submit.has-spinner, .show > .btn-primary.dropdown-toggle, .fieldset-cf7mls-wrapper .show > button.dropdown-toggle,
 .fieldset-cf7mls-wrapper .show > .dropdown-toggle.wpcf7-form-control.wpcf7-submit.has-spinner {
   color: #fff;
   background-color: #0a58ca;
   border-color: #0a53be;
 }
-.btn-check:checked + .btn-primary:focus, .quote_hero .hero_form .btn-check:checked + button[type=submit]:focus, .fieldset-cf7mls-wrapper .btn-check:checked + button:focus,
-.fieldset-cf7mls-wrapper .btn-check:checked + .wpcf7-form-control.wpcf7-submit.has-spinner:focus, .btn-check:active + .btn-primary:focus, .quote_hero .hero_form .btn-check:active + button[type=submit]:focus, .fieldset-cf7mls-wrapper .btn-check:active + button:focus,
-.fieldset-cf7mls-wrapper .btn-check:active + .wpcf7-form-control.wpcf7-submit.has-spinner:focus, .btn-primary:active:focus, .quote_hero .hero_form button[type=submit]:active:focus, .fieldset-cf7mls-wrapper button:active:focus,
-.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:active:focus, .btn-primary.active:focus, .quote_hero .hero_form button.active[type=submit]:focus, .fieldset-cf7mls-wrapper button.active:focus,
-.fieldset-cf7mls-wrapper .active.wpcf7-form-control.wpcf7-submit.has-spinner:focus, .show > .btn-primary.dropdown-toggle:focus, .quote_hero .hero_form .show > button.dropdown-toggle[type=submit]:focus, .fieldset-cf7mls-wrapper .show > button.dropdown-toggle:focus,
+.btn-check:checked + .btn-primary:focus, .fieldset-cf7mls-wrapper .btn-check:checked + button:focus,
+.fieldset-cf7mls-wrapper .btn-check:checked + .wpcf7-form-control.wpcf7-submit.has-spinner:focus, .btn-check:active + .btn-primary:focus, .fieldset-cf7mls-wrapper .btn-check:active + button:focus,
+.fieldset-cf7mls-wrapper .btn-check:active + .wpcf7-form-control.wpcf7-submit.has-spinner:focus, .btn-primary:active:focus, .fieldset-cf7mls-wrapper button:active:focus,
+.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:active:focus, .btn-primary.active:focus, .fieldset-cf7mls-wrapper button.active:focus,
+.fieldset-cf7mls-wrapper .active.wpcf7-form-control.wpcf7-submit.has-spinner:focus, .show > .btn-primary.dropdown-toggle:focus, .fieldset-cf7mls-wrapper .show > button.dropdown-toggle:focus,
 .fieldset-cf7mls-wrapper .show > .dropdown-toggle.wpcf7-form-control.wpcf7-submit.has-spinner:focus {
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-primary:disabled, .quote_hero .hero_form button[type=submit]:disabled, .fieldset-cf7mls-wrapper button:disabled,
-.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:disabled, .btn-primary.disabled, .quote_hero .hero_form button.disabled[type=submit], .fieldset-cf7mls-wrapper button.disabled,
+.btn-primary:disabled, .fieldset-cf7mls-wrapper button:disabled,
+.fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:disabled, .btn-primary.disabled, .fieldset-cf7mls-wrapper button.disabled,
 .fieldset-cf7mls-wrapper .disabled.wpcf7-form-control.wpcf7-submit.has-spinner {
   color: #fff;
   background-color: #0d6efd;
@@ -5543,7 +5541,7 @@ fieldset:disabled .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .quote_block button.placeholder[type=submit]::before, .quote_hero .hero_form button.placeholder[type=submit]::before, .fieldset-cf7mls-wrapper button.placeholder::before,
+.placeholder.btn::before, .quote_block button.placeholder[type=submit]::before, .fieldset-cf7mls-wrapper button.placeholder::before,
 .fieldset-cf7mls-wrapper .placeholder.wpcf7-form-control.wpcf7-submit.has-spinner::before, #wrapperNavbar .navBtn a.placeholder::before {
   display: inline-block;
   content: "";
@@ -21500,7 +21498,7 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   height: 50px;
 }
 
-.btn, .quote_block button[type=submit], .quote_hero .hero_form button[type=submit], .fieldset-cf7mls-wrapper button,
+.btn, .quote_block button[type=submit], .fieldset-cf7mls-wrapper button,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner, #wrapperNavbar .navBtn a {
   position: relative;
   border-radius: 0.25rem;
@@ -21514,33 +21512,33 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   border-radius: var(--border-xs);
   transition: background-color var(--transition);
 }
-.btn.btn-arrow::after, .quote_block button.btn-arrow[type=submit]::after, .quote_hero .hero_form button.btn-arrow[type=submit]::after, .fieldset-cf7mls-wrapper button.btn-arrow::after,
+.btn.btn-arrow::after, .quote_block button.btn-arrow[type=submit]::after, .fieldset-cf7mls-wrapper button.btn-arrow::after,
 .fieldset-cf7mls-wrapper .btn-arrow.wpcf7-form-control.wpcf7-submit.has-spinner::after, #wrapperNavbar .navBtn a.btn-arrow::after {
   content: "»";
   transition: color var(--transition);
   margin-left: 0.5rem;
 }
-.btn:hover, .quote_block button[type=submit]:hover, .quote_hero .hero_form button[type=submit]:hover, .fieldset-cf7mls-wrapper button:hover,
+.btn:hover, .quote_block button[type=submit]:hover, .fieldset-cf7mls-wrapper button:hover,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:hover, #wrapperNavbar .navBtn a:hover {
   color: white;
 }
 
-.btn-primary, .quote_hero .hero_form button[type=submit], .fieldset-cf7mls-wrapper button,
+.btn-primary, .fieldset-cf7mls-wrapper button,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner {
   background-color: var(--col-primary-400);
   border-color: var(--col-primary-400);
   color: white;
 }
-.btn-primary::after, .quote_hero .hero_form button[type=submit]::after, .fieldset-cf7mls-wrapper button::after,
+.btn-primary::after, .fieldset-cf7mls-wrapper button::after,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner::after {
   color: var(--col-secondary-400);
 }
-.btn-primary:hover, .quote_hero .hero_form button[type=submit]:hover, .fieldset-cf7mls-wrapper button:hover,
+.btn-primary:hover, .fieldset-cf7mls-wrapper button:hover,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:hover {
   background-color: var(--col-secondary-400);
   border-color: var(--col-secondary-400);
 }
-.btn-primary:hover::after, .quote_hero .hero_form button[type=submit]:hover::after, .fieldset-cf7mls-wrapper button:hover::after,
+.btn-primary:hover::after, .fieldset-cf7mls-wrapper button:hover::after,
 .fieldset-cf7mls-wrapper .wpcf7-form-control.wpcf7-submit.has-spinner:hover::after {
   color: var(--col-primary-400);
 }
@@ -21852,93 +21850,158 @@ body .gform_wrapper .gform_footer button {
 }
 */
 .quote_hero {
-  min-height: 500px;
-  padding-block: 1rem;
-  position: relative;
-  isolation: isolate;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: multiply;
-  display: grid;
-  place-content: center;
+  height: 500px;
+  background-color: var(--col-primary-400);
+  display: flex;
   color: white;
 }
-.quote_hero::after {
+.quote_hero .container-xl {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+@media (min-width: 992px) {
+  .quote_hero .container-xl {
+    background-size: contain;
+    background-position: right;
+  }
+}
+.quote_hero .container-xl::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(135deg, var(--col-primary-400) 16%, hsl(var(--hsl-primary-400)/0.78) 100%);
+  background-image: linear-gradient(0deg, hsl(var(--hsl-primary-400)/0.78) 0%, hsl(var(--hsl-primary-400)/0.78) 100%);
   z-index: -1;
+}
+@media (min-width: 576px) {
+  .quote_hero .container-xl::after {
+    background-image: linear-gradient(45deg, var(--col-primary-400) 40%, transparent);
+  }
+}
+@media (min-width: 992px) {
+  .quote_hero .container-xl::after {
+    background-image: radial-gradient(circle at 70%, transparent, var(--col-primary-400) 40%);
+  }
 }
 .quote_hero span {
   color: var(--col-secondary-400);
 }
-.quote_hero .pre_title {
-  text-align: center;
-}
-.quote_hero .pre_form {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.quote_hero .icon_grid {
+.quote_hero .container-xl {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 3rem;
+  flex-direction: column;
+  justify-content: center;
 }
-.quote_hero .icon_grid > div {
-  width: 200px;
-  text-align: center;
+.quote_hero h1, .quote_hero .h1 {
+  line-height: 1;
 }
-.quote_hero .icon_grid > div img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.5rem;
+@media (min-width: 576px) {
+  .quote_hero h1, .quote_hero .h1 {
+    line-height: 0.8;
+  }
 }
-.quote_hero a {
-  color: var(--col-secondary-400) !important;
-}
-.quote_hero a:hover {
-  color: white !important;
+.quote_hero h1 span.smaller, .quote_hero .h1 span.smaller {
+  color: white;
+  font-size: var(--fs-800);
+  font-weight: var(--fw-400);
+  line-height: 1;
 }
 .quote_hero .hero_form {
-  background-color: white;
-  border-radius: var(--border-sm);
-  max-width: 590px;
-  margin-inline: auto;
-  margin-bottom: 3rem;
-  padding: 0.5rem 1rem;
+  max-width: 550px;
 }
 .quote_hero .hero_form .gform_heading {
   display: none;
 }
 .quote_hero .hero_form form {
   display: grid;
-  gap: 1rem;
-  align-items: center;
+  gap: 0.5rem;
+  align-items: start;
 }
 @media (min-width: 576px) {
   .quote_hero .hero_form form {
     grid-template-columns: 1fr auto;
   }
 }
+.quote_hero .hero_form form .gform_footer {
+  margin-top: 0;
+}
 .quote_hero .hero_form label {
   display: none !important;
 }
 .quote_hero .hero_form input[type=text] {
   border: none;
-  border-bottom: 1px solid var(--col-primary-400);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  height: 60px;
 }
 .quote_hero .hero_form button[type=submit] {
+  width: 80vw;
   text-transform: initial;
+  background-color: var(--col-secondary-400);
+  border: none;
+  height: 60px;
+  position: relative;
+  padding: 0.5rem 1rem;
+  display: grid;
+  place-content: center;
+  transition: background-color var(--transition);
+}
+@media (min-width: 576px) {
+  .quote_hero .hero_form button[type=submit] {
+    width: unset;
+  }
 }
 .quote_hero .hero_form button[type=submit] span {
   color: white;
+  text-align: left;
+  max-width: 12ch;
+  display: inline-block;
+  line-height: 1.2;
+}
+.quote_hero .hero_form button[type=submit]::after {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  height: 0;
+  width: 0;
+  content: "";
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid var(--col-secondary-400);
+  transition: border-color var(--transition);
+}
+.quote_hero .hero_form button[type=submit]:hover {
+  background-color: color-mix(in srgb, var(--col-secondary-400), white 20%);
+}
+.quote_hero .hero_form button[type=submit]:hover::after {
+  border-left-color: color-mix(in srgb, var(--col-secondary-400), white 20%);
 }
 .quote_hero .hero_form .gform_footer {
   padding: 0 !important;
+}
+.quote_hero__usp .icon_grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.quote_hero__usp .icon_grid > div {
+  width: 200px;
+  text-align: center;
+}
+.quote_hero__usp .icon_grid > div img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+.quote_hero__usp a {
+  color: var(--col-secondary-400) !important;
+}
+.quote_hero__usp a:hover {
+  color: var(--col-primary-900) !important;
 }
 
 .quote_block .gform_heading {

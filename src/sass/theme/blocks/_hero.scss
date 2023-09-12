@@ -17,8 +17,18 @@
         content: "";
         position: absolute;
         inset: 0;
-        background-image: linear-gradient(135deg,var(--col-primary-400) 16%, hsl(var(--hsl-primary-400) / .78) 100%);
-        // mix-blend-mode: multiply;
+        background-image:
+            linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%);
+        @media (min-width:576px) {
+            background-image:
+                linear-gradient(45deg, var(--col-primary-400) 40%, transparent),
+                linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%);
+        }
+        @media (min-width:992px) {
+            background-image:
+                linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%),
+                radial-gradient(circle at 70%, transparent, var(--col-primary-400) 40%);
+        }
         z-index: -1;
     }
 

@@ -48,7 +48,8 @@ defined('ABSPATH') || exit;
             <div><img
                     src="<?=get_stylesheet_directory_uri()?>/img/ico-registered.png">
             </div>
-            <div>We are proud members of both the Property Ombudsman and the NAPB, so rest assured you are in safe hands
+            <div>We are proud members of both the Property Ombudsman and the NAPB, so rest assured you are in safe hands.<br>
+            We are certified as an authorised Data Controller with the Information Commissioner's Office. Registration number ZA538699.
             </div>
         </div>
     </div>

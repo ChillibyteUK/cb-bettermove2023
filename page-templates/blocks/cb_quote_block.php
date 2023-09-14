@@ -10,7 +10,7 @@
                 </h2>
             </div>
             <div class="col-md-6">
-                <?=do_shortcode('[gravityform id="1" title="false"]')?>
+                <?=do_shortcode('[gravityform id="6" title="false"]')?>
             </div>
         </div>
     </div>

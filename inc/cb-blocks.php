@@ -21,6 +21,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
+            'name'				=> 'cb_form_hero',
+            'title'				=> __('CB Quote Form Hero'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_form_hero.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
             'name'				=> 'cb_tp_slider',
             'title'				=> __('CB TP Slider'),
             'category'			=> 'layout',

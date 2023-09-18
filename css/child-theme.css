@@ -21886,6 +21886,23 @@ body .gform_wrapper .gform_footer button {
     background-image: radial-gradient(circle at 70%, transparent, var(--col-primary-400) 40%);
   }
 }
+.quote_hero--form .container-xl::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(0deg, hsl(var(--hsl-primary-400)/0.78) 0%, hsl(var(--hsl-primary-400)/0.78) 100%);
+  z-index: -1;
+}
+@media (min-width: 576px) {
+  .quote_hero--form .container-xl::after {
+    background-image: linear-gradient(45deg, var(--col-primary-400) 40%, transparent), linear-gradient(0deg, hsl(var(--hsl-primary-400)/0.78) 0%, hsl(var(--hsl-primary-400)/0.78) 100%);
+  }
+}
+@media (min-width: 992px) {
+  .quote_hero--form .container-xl::after {
+    background-image: linear-gradient(0deg, hsl(var(--hsl-primary-400)/0.78) 0%, hsl(var(--hsl-primary-400)/0.78) 100%), radial-gradient(circle at 70%, transparent, var(--col-primary-400) 40%);
+  }
+}
 .quote_hero span {
   color: var(--col-secondary-400);
 }
@@ -21899,7 +21916,7 @@ body .gform_wrapper .gform_footer button {
 }
 @media (min-width: 576px) {
   .quote_hero h1, .quote_hero .h1 {
-    line-height: 0.8;
+    line-height: 1;
   }
 }
 .quote_hero h1 span.smaller, .quote_hero .h1 span.smaller {

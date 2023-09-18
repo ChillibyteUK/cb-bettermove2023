@@ -10,7 +10,7 @@ $bg = wp_get_attachment_image_url(get_field('background'), 'full');
         </h1>
         <div class="pre_form text-center mb-4">Get a <span>up to 100%</span> and sell in <span>under 7 days</span></div>
         <div class="hero_form">
-            <?=do_shortcode('[gravityform id="3"]')?> <!-- 7 prod -->
+            <?=do_shortcode('[gravityform id="7"]')?>
         </div>
     </div>
 </section>

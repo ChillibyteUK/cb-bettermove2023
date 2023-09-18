@@ -3,7 +3,7 @@
         <div class="tp_slider__slider">
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/napb-logo.jpg" alt=""></div>
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/logo-ombudsman--dk.png" alt=""></div>
-            <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/hmrc.jpg" alt=""></div>
+            <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/gov-uk.png" alt=""></div>
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/logo-trans-allagents.png" alt=""></div>
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/trustpilot-4.6-stars.png" alt=""></div>
         </div>

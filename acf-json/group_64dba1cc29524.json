@@ -125,6 +125,22 @@
                     "parent_repeater": "field_64dba35ac147c"
                 }
             ]
+        },
+        {
+            "key": "field_65081e5de6c74",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -145,5 +161,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1692875689
+    "modified": 1695030887
 }

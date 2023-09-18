@@ -1,5 +1,5 @@
-.quote_hero {
-    height: 500px;
+.quote_form_hero {
+    min-height: 500px;
     background-color: var(--col-primary-400);
 
     .container-xl {
@@ -13,22 +13,27 @@
         height: 100%;
         position: relative;
         isolation: isolate;
-   
+
         &::after {
             content: "";
             position: absolute;
             inset: 0;
-            background-image: linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%);
+            background-image:
+                linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%);
             @media (min-width:576px) {
-                background-image: linear-gradient(45deg, var(--col-primary-400) 40%, transparent);
+                background-image:
+                    linear-gradient(45deg, var(--col-primary-400) 40%, transparent),
+                    linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%);
             }
             @media (min-width:992px) {
-                background-image: radial-gradient(circle at 70%, transparent, var(--col-primary-400) 40%);
+                background-image:
+                    linear-gradient(0deg, hsl(var(--hsl-primary-400) / 0.78) 0%, hsl(var(--hsl-primary-400) / 0.78) 100%),
+                    radial-gradient(circle at 70%, transparent, var(--col-primary-400) 40%);
             }
             z-index: -1;
         }
     }
-
+    
     display: flex;
     
     
@@ -45,6 +50,7 @@
 
     h1 {
         line-height: 1;
+        text-wrap: balance;
         @media (min-width:576px) {
             line-height: 1;
         }
@@ -58,20 +64,24 @@
 
 
     .hero_form {
-        max-width: 550px;
+        width: min(600px,90vw);
+        background-color: white;
+        border-radius: var(--border-xs);
+        margin-inline: auto;
+        padding: 2rem;
 
         .gform_heading { display: none; }        
-        form {
-            display: grid;
-            gap: 0.5rem;
-            align-items: start;
-            @media (min-width:576px) {
-                grid-template-columns: 1fr auto;
-            }
-            .gform_footer {
-                margin-top: 0;
-            }
-        }
+        // form {
+        //     display: grid;
+        //     gap: 0.5rem;
+        //     align-items: start;
+        //     @media (min-width:576px) {
+        //         grid-template-columns: 1fr auto;
+        //     }
+        //     .gform_footer {
+        //         margin-top: 0;
+        //     }
+        // }
         .gform-body {
             // width: 75%;
         }
@@ -79,23 +89,20 @@
             display: none !important;
         }
 
-        input[type=text] {
-            border: none;
-            text-align: center;
-            padding: 0.5rem 1rem;
-            height: 60px;
-        }
+        // input[type=text] {
+        //     border: none;
+        //     text-align: center;
+        //     padding: 0.5rem 1rem;
+        //     height: 60px;
+        // }
 
         button[type=submit] {
-            width: 80vw;
-            @media(min-width:576px) {
-                width: unset;
-            }
-            text-transform: initial;
-            background-color: var(--col-secondary-400);
+            width: 100%;
+            margin-top: 0.5rem;
+             text-transform: initial;
+             background-color: var(--col-secondary-400);
             border: none;
-            height: 60px;
-            position: relative;
+            height: 50px;
             padding: 0.5rem 1rem;
             display: grid;
             place-content: center;
@@ -103,27 +110,11 @@
             span {
                 color: white;
                 text-align: left;
-                max-width: 12ch;
                 display: inline-block;
                 line-height: 1.2;
             }
-            &::after {
-                position: absolute;
-                right: -30px;
-                top: 0;
-                height: 0;
-                width: 0;
-                content: "";
-                border-top: 30px solid transparent;
-                border-bottom: 30px solid transparent;
-                border-left: 30px solid var(--col-secondary-400);
-                transition: border-color var(--transition);
-            }
             &:hover {
                 background-color: color-mix(in srgb, var(--col-secondary-400), white 20%);
-                &::after {
-                    border-left-color: color-mix(in srgb, var(--col-secondary-400), white 20%);
-                }
             }
         }
 

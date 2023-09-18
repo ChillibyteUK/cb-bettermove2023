@@ -45,6 +45,14 @@ if ($class) {
         $collapsed = 'collapsed';
     }
     echo '</div>';
-     ?>
+    if (get_field('cta')) {
+        $link = get_field('cta');
+        ?>
+    <div class="text-center mt-5">
+        <a href="<?=$link['url']?>" target="<?=$link['target']?>" class="btn btn-primary btn-arrow"><?=$link['title']?></a>
+    </div>
+        <?php
+    }
+        ?>
     </div>
 </section>

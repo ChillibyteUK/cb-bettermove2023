@@ -1,0 +1,47 @@
+.full_width {
+    min-height: 400px;
+    padding-block: 2rem;
+    position: relative;
+    isolation: isolate; 
+
+    display: grid;
+    align-content: center;
+
+    @media (min-width:768px) {
+        ul {
+            columns: 2;
+            gap: 4rem;
+        }
+    }
+
+    li {
+        position: relative;
+        list-style: none;
+        margin-bottom: 1.4rem;
+        max-width: 45ch;
+    }
+
+    li.no::before {
+        position: absolute;
+        content: "\f057";
+        font-family: 'font awesome 6 free';
+        font-weight: 400;
+        top: 4px;
+        left: -1.8rem;
+        color: firebrick;
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    li.yes::before {
+        position: absolute;
+        content: "\f058";
+        font-family: 'font awesome 6 free';
+        font-weight: 400;
+        top: 4px;
+        left: -1.8rem;
+        color: var(--col-priary-400);
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+}

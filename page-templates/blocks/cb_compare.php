@@ -44,26 +44,26 @@
                     <div class="compare__body">
                         <div class="compare__inner compare__yes">
                             <div class="h4">Proactive approach</div>
-                            We discuss with you your requirements for price and timescales and set out a pricing
-                            strategy that meets those requirements. This is done immediately to allow us to get the
-                            property marketed without delay.
+                            We discuss with you your requirements for price and timescales and set out a pricing strategy
+                            that meets those requirements. This is done within minutes of you contacting us.
                         </div>
                         <div class="compare__inner compare__yes">
-                            <div class="h4">24 hours to start marketing</div>
-                            We have the latest technology to ensure that we will have your property marketed within 24
-                            hours from you becoming a client.
+                            <div class="h4">24 hours later</div>
+                            In less than 24 hours we will either make you a formal cash offer or agree a fixed sum that we
+                            will offer it to our panel of cash investors for. The speed of which you need completion will
+                            determine the best approach.
                         </div>
                         <div class="compare__inner compare__yes">
-                            <div class="h4">Matching to our huge buyer network</div>
-                            Our team will proactively match your property against our extensive database of cash buyers,
-                            professional investors and pre-approved buyers to find a matching buyer within the quickest
-                            timescale.
+                            <div class="h4">Huge buyer network</div>
+                            If you don’t accept our cash offer then our team will proactively match your property against
+                            our extensive database of cash buyers, professional investors and pre-approved buyers to find a
+                            matching buyer within the quickest timescale.
                         </div>
                         <div class="compare__inner compare__yes">
                             <div class="h4">We set your price right from day 1</div>
-                            We don't want to give you an unachievable price to then simply reduce it in a month when it
-                            hasn't sold. We would rather be open and honest from the start and set a realistic price to
-                            get your property sold without delay. That's why we are an awarding winning agency!
+                            We don’t want to give you an unachievable price. We would rather be open and honest from the
+                            start and set a realistic price to get your property sold without delay. That's why we are an
+                            awarding winning agency.
                         </div>
                     </div>
                 </div>

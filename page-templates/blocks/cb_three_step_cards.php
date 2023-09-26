@@ -1,6 +1,6 @@
 <section class="three_step_cards px-2">
     <div class="container-xl">
-        <div class="row g-5 justify-content-center">
+        <div class="row g-5 justify-content-around">
             <div class="col-md-4">
                 <a class="three_step_cards__card" href="/properties/">
                     <img class="three_step_cards__image"

@@ -6,6 +6,7 @@
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/gov-uk.png" alt=""></div>
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/all-agents.png" alt=""></div>
             <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/trustpilot-4.6-stars.png" alt=""></div>
+            <div class="tp_slider__card"><img src="<?=get_stylesheet_directory_uri()?>/img/reviews-io-4.9.png" alt=""></div>
         </div>
     </div>
 </section>

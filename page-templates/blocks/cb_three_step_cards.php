@@ -1,6 +1,6 @@
 <section class="three_step_cards px-2">
     <div class="container-xl">
-        <div class="row g-5">
+        <div class="row g-5 justify-content-center">
             <div class="col-md-4">
                 <a class="three_step_cards__card" href="/properties/">
                     <img class="three_step_cards__image"
@@ -23,18 +23,6 @@
                     <div class="three_step_cards__content">Let us help you sell your property a better way. Quick, easy
                         and hassle free.</div>
                     <div class="three_step_cards__link">Contact us</div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a class="three_step_cards__card" href="/part-exchange/">
-                    <img class="three_step_cards__image"
-                        src="<?=get_stylesheet_directory_uri()?>/img/pic--manual.svg"
-                        alt="icon">
-                    <div class="preTitle">Buying &amp; Selling</div>
-                    <h2 class="three_step_cards__title">Part exchange</h2>
-                    <div class="three_step_cards__content">Found your next home but haven't yet sold yours? Part
-                        Exchange could be the answer.</div>
-                    <div class="three_step_cards__link">Learn more</div>
                 </a>
             </div>
         </div>

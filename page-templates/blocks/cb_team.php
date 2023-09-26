@@ -1,3 +1,4 @@
+<a id="team" class="anchor"></a>
 <section class="team py-5">
     <div class="container-xl text-center">
         <div class="preTitle">Property Experts</div>

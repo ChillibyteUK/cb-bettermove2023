@@ -1,0 +1,70 @@
+.calculator {
+    background-color: var(--col-grey-400);
+    #valuation {
+        font-weight: 300;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    #esLabel,
+    #bmLogo {
+        height: 60px;
+        margin-bottom: 0.5rem;
+    }
+    #bmLogo {
+        position: relative;
+        img {
+            max-width: 90%;
+        } 
+         .fa-stack {
+            font-size: 0.5rem;
+            color: #aaa;
+        }
+    }
+    #esPrice,
+    #gaPrice {
+        font-size: 1.4rem;
+    }
+    .calcContainer {
+        background-color: #fff;
+        padding: 1rem;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0px 12px 18px -6px rgba(12,66,84,0.29);
+    }
+
+  /* Special styling for WebKit/Blink */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid var(--col-primary-400);;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: var(--col-primary-400);
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    // box-shadow: 1px 1px 1px var(--col-primary-400), 0px 0px 1px var(--col-primary-400); /* Add cool effects to your sliders! */
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    // box-shadow: 1px 1px 1px var(--col-primary-400), 0px 0px 1px var(--col-primary-400);
+    border: 1px solid var(--col-primary-400);
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: var(--col-primary-400);
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    // box-shadow: 1px 1px 1px var(--col-primary-400), 0px 0px 1px var(--col-primary-400);
+    border: 1px solid var(--col-primary-400);
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: var(--col-primary-400);
+    cursor: pointer;
+  }
+
+}

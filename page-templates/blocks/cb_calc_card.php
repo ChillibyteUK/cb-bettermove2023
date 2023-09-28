@@ -1,11 +1,8 @@
-<?php
-$classes = $block['className'] ?? null;
-?>
-<section class="calculator has-grey-400-background-color py-5 <?=$classes?>">
-    <div class="container-xl">
-        <div class="preTitle text-center"><?=get_field('pre_title')?></div>
-        <h2 class="mb-5 text-center"><?=get_field('title')?></h2>
+<section class="three_step_cards px-2">
+    <div class="calculator">
         <div class="calcContainer p-4">
+            <div class="preTitle text-center"><?=get_field('pre_title')?></div>
+            <h2 class="mb-5 text-center"><?=get_field('title')?></h2>
             <div class="row g-4">
                 <div class="col-12">
                     <div>Your House Valuation</div>

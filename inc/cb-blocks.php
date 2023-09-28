@@ -93,6 +93,15 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
+            'name'				=> 'cb_calc_card',
+            'title'				=> __('CB Calculator Card'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_calc_card.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
             'name'				=> 'cb_compare_costs',
             'title'				=> __('CB Compare Costs'),
             'category'			=> 'layout',

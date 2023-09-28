@@ -22584,6 +22584,34 @@ body .gform_wrapper .gform_footer button {
   margin-inline: auto;
 }
 
+.number_steps {
+  background-color: var(--col-secondary-200);
+}
+.number_steps__grid {
+  margin-inline: auto;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 1050px;
+}
+.number_steps__card {
+  display: grid;
+  grid-template-columns: 7rem auto;
+  border-radius: var(--border-sm);
+  overflow: hidden;
+}
+.number_steps__card_step {
+  background-color: var(--col-primary-400);
+  color: white;
+  font-weight: var(--fw-600);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+.number_steps__card_inner {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  text-align: start;
+}
+
 .faqs .accordion {
   display: grid;
   row-gap: 1rem;

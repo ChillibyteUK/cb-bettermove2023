@@ -25,7 +25,7 @@ $classes = $block['className'] ?? null;
                             <i class="fa-solid fa-info fa-stack-1x"></i>
                         </span>
                     </div>
-                    <div id="gaPrice"></div>
+                    <div id="bmPrice"></div>
                 </div>
                 <div class="col-12">
                     <div id="diff" class="text-center"></div>
@@ -68,29 +68,29 @@ add_action('wp_footer',function(){
 
     const outputs = [
         {
-            esPrice: 79625,
-            gaPrice: 82500,
-            diff: '&pound;2,875 more and zero stress'
+            esPrice: 80421,
+            bmPrice: 83325,
+            diff: '&pound;2,904 more and zero stress'
         },
         {
-            esPrice: 163450,
-            gaPrice: 165000,
-            diff: '&pound;1,550 more and zero stress'
+            esPrice: 165085,
+            bmPrice: 166650,
+            diff: '&pound;1,565 more and zero stress'
         },
         {
-            esPrice: 247275,
-            gaPrice: 247500,
-            diff: '&pound;225 more and zero stress'
+            esPrice: 249748,
+            bmPrice: 249975,
+            diff: '&pound;227 more and zero stress'
         },
         {
-            esPrice: 331100,
-            gaPrice: 330000,
-            diff: '&pound;1,100 less but zero stress'
+            esPrice: 334411,
+            bmPrice: 333300,
+            diff: '&pound;1,111 less but zero stress'
         },
         {
-            esPrice: 414925,
-            gaPrice: 412500,
-            diff: '&pound;2,425 less but zero stress'
+            esPrice: 419074,
+            bmPrice: 416625,
+            diff: '&pound;2,449 less but zero stress'
         }
     ];
 
@@ -103,10 +103,10 @@ add_action('wp_footer',function(){
         var valuation = $('#price').val();
         var ix = valuation - 1;
         valuation = valuation * 100000;
-        var diff = outputs[ix].esPrice - outputs[ix].gaPrice;
+        var diff = outputs[ix].esPrice - outputs[ix].bmPrice;
 
         $('#esPrice').html('&pound;'+outputs[ix].esPrice.toLocaleString('en-GB'));
-        $('#gaPrice').html('&pound;'+outputs[ix].gaPrice.toLocaleString('en-GB'));
+        $('#bmPrice').html('&pound;'+outputs[ix].bmPrice.toLocaleString('en-GB'));
         $('#valuation').html('&pound;'+valuation.toLocaleString('en-GB'));
         $('#diff').html(outputs[ix].diff);
     }

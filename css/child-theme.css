@@ -21680,6 +21680,13 @@ h1 span, .h1 span, h2 span, .h2 span, h3 span, .h3 span, h4 span, .h4 span, .h99
   color: var(--col-secondary-400);
 }
 
+.light-link {
+  color: white;
+}
+.light-link:hover {
+  color: var(--col-secondary-400);
+}
+
 #preNav {
   background-color: var(--col-primary-400);
   color: white;

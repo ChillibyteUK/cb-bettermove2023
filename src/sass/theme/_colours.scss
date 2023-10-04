@@ -43,3 +43,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, .h99 {
         color: var(--col-secondary-400);
     }
 }
+
+.light-link {
+    color: white;
+    &:hover {
+        color: var(--col-secondary-400);
+    }
+}

@@ -13,7 +13,6 @@
             <img src="<?=$img?>" alt="" class="team__image">
             <div class="team__name"><?=get_sub_field('name')?></div>
             <div class="team__role"><?=get_sub_field('role')?></div>
-            <div class="team__email"><a href="mailto:<?=get_sub_field('email')?>"><?=get_sub_field('email')?></a></div>
         </div>
             <?php
         }

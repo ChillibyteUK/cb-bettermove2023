@@ -65,29 +65,29 @@ add_action('wp_footer',function(){
 
     const outputs = [
         {
-            esPrice: 80421,
-            bmPrice: 83325,
-            diff: '&pound;2,904 more and zero stress'
+            esPrice: 92500,
+            bmPrice: 90000,
+            diff: '&pound;2,500 less but zero stress'
         },
         {
-            esPrice: 165085,
-            bmPrice: 166650,
-            diff: '&pound;1,565 more and zero stress'
+            esPrice: 185000,
+            bmPrice: 180000,
+            diff: '&pound;5,000 less but zero stress'
         },
         {
-            esPrice: 249748,
-            bmPrice: 249975,
-            diff: '&pound;227 more and zero stress'
+            esPrice: 277500,
+            bmPrice: 270000,
+            diff: '&pound;7,500 less but zero stress'
         },
         {
-            esPrice: 334411,
-            bmPrice: 333300,
-            diff: '&pound;1,111 less but zero stress'
+            esPrice: 370000,
+            bmPrice: 360000,
+            diff: '&pound;10,000 less but zero stress'
         },
         {
-            esPrice: 419074,
-            bmPrice: 416625,
-            diff: '&pound;2,449 less but zero stress'
+            esPrice: 462500,
+            bmPrice: 450000,
+            diff: '&pound;12,500 less but zero stress'
         }
     ];
 

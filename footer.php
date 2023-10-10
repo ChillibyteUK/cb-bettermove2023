@@ -55,7 +55,11 @@ defined('ABSPATH') || exit;
     </div>
     <div class="colophon">
         <div class="container-xl">
-            <div>&copy; <?=date('Y')?> Bettermove
+            <div>
+                &copy; <?=date('Y')?> Bettermove
+                | <a href="/privacy-policy/">Privacy</a>
+                | <a href="/cookie-policy/">Cookies</a>
+                | <a href="/terms/">Terms</a>
             </div>
             <div><a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                     title="Digital Marketing by Chillibyte"></a></div>

@@ -59,7 +59,7 @@ defined('ABSPATH') || exit;
                 &copy; <?=date('Y')?> Bettermove
                 | <a href="/privacy-policy/">Privacy</a>
                 | <a href="/cookie-policy/">Cookies</a>
-                | <a href="/terms/">Terms</a>
+                | <a href="/terms-conditions/">Terms</a>
             </div>
             <div><a href="https://www.chillibyte.co.uk/" rel="nofollow noopener" target="_blank" class="cb"
                     title="Digital Marketing by Chillibyte"></a></div>

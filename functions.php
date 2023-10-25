@@ -123,10 +123,12 @@ add_filter( 'register_post_type_args', function( $args, $post_type )
 add_action( 'template_redirect', 'unlisted_property_redirect' );
 function unlisted_property_redirect()
 {
-    // check if is a 404 error, and it's on your property custom post type
-    if( is_404() && is_singular('property') )
-    {
-        // then redirect to yourdomain.com/jobs/
+    //check for 404
+    if( is_404()){
+        global $wp_query;
+        //check that wp has figured out post_type from the request
+        //and it's the type you're looking for
+        if( isset($wp_query->query['post_type']) && $wp_query->query['post_type'] == 'property' ){
         wp_redirect( home_url( '/properties/' ) );
         exit();
     }

@@ -119,3 +119,15 @@ add_filter( 'register_post_type_args', function( $args, $post_type )
             $args['rewrite']['with_front'] = false;
     return $args;
 }, 99, 2 );
+
+add_action( 'template_redirect', 'unlisted_property_redirect' );
+function unlisted_property_redirect()
+{
+    // check if is a 404 error, and it's on your property custom post type
+    if( is_404() && is_singular('property') )
+    {
+        // then redirect to yourdomain.com/jobs/
+        wp_redirect( home_url( '/properties/' ) );
+        exit();
+    }
+}

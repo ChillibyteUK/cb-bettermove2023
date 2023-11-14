@@ -18,7 +18,6 @@
                     </h3>
                     <div class="feature_cards__content">
                         <?=get_field('card_content_1')?>
-                        </h3>
                     </div>
                 </div>
             </div>
@@ -31,7 +30,6 @@
                     </h3>
                     <div class="feature_cards__content">
                         <?=get_field('card_content_2')?>
-                        </h3>
                     </div>
                 </div>
             </div>

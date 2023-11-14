@@ -1,6 +1,6 @@
 <?php
 $preTitle = get_field('pre_title') ?: 'For sale';
-$title = get_field('title') ?: 'Our latet properties';
+$title = get_field('title') ?: 'Our latest properties';
 ?>
 <section class="latest_properties py-5">
     <div class="container-xl">

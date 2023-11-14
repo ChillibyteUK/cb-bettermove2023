@@ -1,8 +1,12 @@
+<?php
+$preTitle = get_field('pre_title') ?: 'For sale';
+$title = get_field('title') ?: 'Our latet properties';
+?>
 <section class="latest_properties py-5">
     <div class="container-xl">
         <div class="text-center mb-5">
-            <div class="preTitle">For sale</div>
-            <h2>Our latest properties</h2>
+            <div class="preTitle"><?=$preTitle?></div>
+            <h2><?=$title?></h2>
         </div>
         <div class="row g-5 mb-5">
         <?php

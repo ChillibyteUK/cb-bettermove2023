@@ -23333,6 +23333,19 @@ body .gform_wrapper .gform_footer button {
   background-color: #f7ddd9;
   padding: 2rem;
 }
+.investor_form button[type=submit] {
+  margin-right: 0;
+  border: 1px solid var(--col-secondary-400);
+  background-color: var(--col-primary-400);
+  padding-block: 0.5rem;
+  transition: background-color var(--transition);
+}
+.investor_form button[type=submit] span {
+  color: white;
+}
+.investor_form button[type=submit]:hover {
+  background-color: var(--col-secondary-400);
+}
 
 .wp-block-quote--cb {
   position: relative;

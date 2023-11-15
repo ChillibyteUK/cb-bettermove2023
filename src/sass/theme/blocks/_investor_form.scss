@@ -15,8 +15,12 @@
         padding: 2rem;
     }
 
+    .gform_footer.before {
+        justify-content: flex-end;
+    }
+    
     button[type=submit] {
-        margin-right: 0;
+        
         border: 1px solid var(--col-secondary-400);
         background-color: var(--col-primary-400);
         padding-block: 0.5rem;

@@ -23333,8 +23333,10 @@ body .gform_wrapper .gform_footer button {
   background-color: #f7ddd9;
   padding: 2rem;
 }
+.investor_form .gform_footer.before {
+  justify-content: flex-end;
+}
 .investor_form button[type=submit] {
-  margin-right: 0;
   border: 1px solid var(--col-secondary-400);
   background-color: var(--col-primary-400);
   padding-block: 0.5rem;

@@ -2,9 +2,9 @@
 $preTitle = get_field('pre_title') ?: 'Simple and cost effective';
 $title = get_field('left_title') ?: 'What we offer';
 ?>
-<section class="investor_form">
+<section class="investor_form pt-5 pb-4">
     <div class="container-xl">
-        <div class="row">
+        <div class="row gx-5">
             <div class="col-md-6">
                 <div class="text-center mb-5">
                     <div class="preTitle"><?=$preTitle?></div>
@@ -39,10 +39,12 @@ $title = get_field('left_title') ?: 'What we offer';
             </div>
             <div class="col-md-6">
                 <div class="text-center mb-5">
-                    <h2 class="h3"><?=get_field('right_title')?></h2>
-                    ARROW
+                    <h2 class="h3 mb-4"><?=get_field('right_title')?></h2>
+                    <div class="triangle"></div>
                 </div>
-                FORM HERE
+                <div class="investor_form__form">
+                    <?=do_shortcode('[gravityform id="' . get_field('form_id') . '" title="false"]')?>
+                </div>
             </div>
         </div>
     </div>

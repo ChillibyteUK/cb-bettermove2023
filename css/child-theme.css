@@ -23340,7 +23340,7 @@ body .gform_wrapper .gform_footer button {
 .investor_form .gform_footer.before {
   justify-content: flex-end;
 }
-.investor_form input {
+.investor_form input, .investor_form textarea {
   border: none;
 }
 .wp-block-quote--cb {

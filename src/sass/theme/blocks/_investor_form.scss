@@ -18,6 +18,10 @@
     .gform_footer.before {
         justify-content: flex-end;
     }
+
+    input {
+        border: none;
+    }
     
     button[type=submit] {
         @extend .btn;

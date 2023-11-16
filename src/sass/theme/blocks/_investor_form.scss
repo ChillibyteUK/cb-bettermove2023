@@ -20,16 +20,8 @@
     }
     
     button[type=submit] {
-        
-        border: 1px solid var(--col-secondary-400);
-        background-color: var(--col-primary-400);
-        padding-block: 0.5rem;
-        transition: background-color var(--transition);
-        span {
-            color: white;
-        }
-        &:hover {
-            background-color: var(--col-secondary-400);
-        }
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-arrow;
     }
 }

@@ -68,19 +68,8 @@ defined('ABSPATH') || exit;
 </footer>
 <?php wp_footer();
 ?>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5fbe7a71a1d54c18d8ed5645/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+<call-us-selector phonesystem-url=https://bettermove.3cx.co.uk:5001 party="LiveChat233663"></call-us-selector>
+<script defer src=https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js id="tcx-callus-js" charset="utf-8"></script>
 <?php
 if (get_field('gtm_property', 'options')) {
     ?>

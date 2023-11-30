@@ -1,5 +1,5 @@
 <?php
-$preTitle = get_field('pre_title') ?: 'Simple and cost effective';
+$preTitle = get_field('pre_title') ?? null;
 $title = get_field('left_title') ?: 'What we offer';
 ?>
 <section class="investor_form pt-5 pb-4">

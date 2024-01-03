@@ -134,3 +134,44 @@ function unlisted_property_redirect()
         }
     }
 }
+
+add_action( 'gform_after_submission_7', 'post_to_third_party', 10, 2 );
+function post_to_third_party( $entry, $form ) {
+    $url = "https://bettermove.flg360.co.uk/api/APILeadCreateUpdate.php";
+    $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+    <data>
+      <lead>
+        <key>vrShN7qYL7q1Zf6GfzpVwKyEBddWSZBf</key>
+        <leadgroup>56597</leadgroup>
+        <site>0</site>
+        <status>New</status>
+        <medium>Contact form</medium>
+        <term>" . rgar( $entry, 6 ) . "</term>
+        <firstname>" . rgar( $entry, '5.3' ) . "</firstname>
+        <lastname>" . rgar( $entry, '5.6' ) . "</lastname>
+        <phone1>" . rgar( $entry, 3 ) . "</phone1>
+        <email>" . rgar( $entry, 4 ) . "</email>
+        <contactphone>Yes</contactphone>
+        <contactsms>Yes</contactsms>
+        <contactemail>Yes</contactemail>
+        <contactmail>Yes</contactmail>
+        <contactfax>Yes</contactfax>
+        <contacttime>Anytime</contacttime>
+        <address>" . rgar( $entry, 2 ) . "</address>
+      </lead>
+    </data>";
+
+    $response_json = wp_remote_post( 
+        $url, 
+        array(
+            'method' => 'POST',
+            'timeout' => 45,
+            'redirection' => 5,
+            'httpversion' => '1.0',
+            'headers' => array("Content-type" => "application/xml"),
+            'body' => $xml,
+            'sslverify' => false
+        )
+    );
+    GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response_json, true ) );
+}

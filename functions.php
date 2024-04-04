@@ -175,3 +175,12 @@ function post_to_third_party( $entry, $form ) {
     );
     GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response_json, true ) );
 }
+
+function bg_disable_front_page_wpseo_next_rel_link( $link ) {
+    if ( home() ) {
+        return false;
+    }
+
+    return $link;
+}
+add_filter( 'wpseo_next_rel_link', 'bg_disable_front_page_wpseo_next_rel_link' );

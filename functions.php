@@ -177,7 +177,7 @@ function post_to_third_party( $entry, $form ) {
 }
 
 function bg_disable_front_page_wpseo_next_rel_link( $link ) {
-    if ( home() ) {
+    if ( is_home() ) {
         return false;
     }
 

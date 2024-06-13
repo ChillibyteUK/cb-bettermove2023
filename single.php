@@ -47,7 +47,7 @@ foreach ($blocks as $block) {
                 <div class="sidebar">
                     <div class="h5 d-none d-lg-block">Quick Links</div>
                     <div class="h5 d-lg-none" data-bs-toggle="collapse" href="#links" role="button">Quick Links</div>
-                    <div class="collapse d-lg-block" id="links">
+                    <div class="collapse d-lg-block pb-4" id="links">
                         <?php
             foreach ($sidebar as $heading => $id) {
                 ?>
@@ -58,8 +58,8 @@ foreach ($blocks as $block) {
             }
         ?>
                     </div>
+                    <a href="/contacts/" class="btn btn btn-secondary btn-arrow">Let's Talk</a>
                 </div>
-                <a href="/contacts/" class="btn btn btn-secondary btn-arrow">Let's Talk</a>
                 <?php
     }
 ?>
@@ -86,11 +86,13 @@ while ($r->have_posts()) {
                             src="<?=get_the_post_thumbnail_url(get_the_ID(), 'large')?>">
                         <div class="index_blog__content">
                             <h2 class="fs-5 index_blog__title pb-2 mb-0">
-                                <?=get_the_title(get_the_ID())?></h2>
+                                <?=get_the_title(get_the_ID())?>
+                            </h2>
                             <div class="d-flex flex-column">
                                 <div class="index_blog__read">
                                     <?=estimate_reading_time_in_minutes(get_the_content(null, false, get_the_ID()), 200, true, false)?>m
-                                    read</div>
+                                    read
+                                </div>
                                 <div class="index_blog__meta">
                                     <div class="index_blog__date">
                                         <?=get_the_date('jS F, Y', get_the_ID())?>
@@ -110,3 +112,4 @@ while ($r->have_posts()) {
 </main>
 <?php
 get_footer();
+?>

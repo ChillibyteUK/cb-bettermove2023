@@ -58,7 +58,11 @@ foreach ($blocks as $block) {
             }
         ?>
                     </div>
-                    <a href="/contacts/" class="btn btn btn-secondary btn-arrow">Let's Talk</a>
+                    <!-- <a href="/contacts/" class="btn btn btn-secondary btn-arrow">Let's Talk</a> -->
+                    <div class="sidebar__form">
+                        <div class="h5">Get an offer today</div>
+                        <?=do_shortcode('[gravityform id="1" title="false"]')?>
+                    </div>
                 </div>
                 <?php
     }

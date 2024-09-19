@@ -43,11 +43,19 @@ $img = get_the_post_thumbnail_url(get_option( 'page_for_posts' ),'full');
     }
     ?>
     </div>
-    <?php
-    /*
-    numeric_posts_nav()
-    */
-    ?>
+
+    <div class="row g-4 mb-4">
+       <!-- pagination -->
+       <div class="col-md-12 post_paginations">
+       <?php the_posts_pagination( array(
+       'mid_size'  => 2,
+       'screen_reader_text' => __( ' ', 'theme_name' ),
+       'prev_text' => __( 'Previous', 'theme_name' ),
+       'next_text' => __( 'Next', 'theme_name' ),
+       ) ); ?>
+       </div>
+    </div>
+    
 </div>
 </main>
 <?php

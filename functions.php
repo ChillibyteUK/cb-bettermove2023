@@ -137,6 +137,15 @@ function unlisted_property_redirect()
 
 add_action( 'gform_after_submission_7', 'post_to_third_party', 10, 2 );
 function post_to_third_party( $entry, $form ) {
+
+    $sessionData = [
+        'referring_url' => isset($_SESSION['referring_url']) ? $_SESSION['referring_url'] : '',
+        'first_page' => isset($_SESSION['first_page']) ? $_SESSION['first_page'] : '',
+        'utm_source' => isset($_SESSION['utm_source']) ? $_SESSION['utm_source'] : '',
+        'utm_medium' => isset($_SESSION['utm_medium']) ? $_SESSION['utm_medium'] : '',
+        'utm_term' => isset($_SESSION['utm_term']) ? $_SESSION['utm_term'] : '',
+    ];
+
     $url = "https://bettermove.flg360.co.uk/api/APILeadCreateUpdate.php";
     $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <data>

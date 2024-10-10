@@ -248,6 +248,39 @@ add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
 
 
+function storeSessionData() {
+    if (!isset($_SESSION['data_captured'])) {
+        // Store referring URL if available
+        if (!isset($_SESSION['referring_url']) && isset($_SERVER['HTTP_REFERER'])) {
+            $_SESSION['referring_url'] = $_SERVER['HTTP_REFERER'];
+        }
+
+        if (!isset($_SESSION['first_page'])) {
+            $firstPageUrl = "https://" . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?');
+            $_SESSION['first_page'] = $firstPageUrl;
+            // echo "First Page URL stored: " . $_SESSION['first_page'] . "<br>";
+        }
+
+        // this splits the url parameters into name/value pairs
+        $parametersToCapture = [
+            'utm_source', 'utm_medium', 'utm_term'
+        ];
+        
+        parse_str($_SERVER['QUERY_STRING'], $queryParams);
+        foreach ($parametersToCapture as $param) {
+            if (isset($queryParams[$param])) {
+                $_SESSION[$param] = $queryParams[$param];
+                // echo "URL Parameter {$param} stored: " . $queryParams[$param] . "<br>";
+            }
+        }
+
+        // Mark data as captured
+        $_SESSION['data_captured'] = true;
+    }
+}
+
+
+
 // black thumbnails - fix alpha channel
 /**
  * Patch to prevent black PDF backgrounds.

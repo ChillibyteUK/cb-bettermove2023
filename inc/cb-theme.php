@@ -286,7 +286,7 @@ function storeSessionData() {
     }
 }
 
-add_action('wp_footer', 'debug_session_data');
+// add_action('wp_footer', 'debug_session_data');
 function debug_session_data() {
     if (session_id()) {
         echo '<!--';

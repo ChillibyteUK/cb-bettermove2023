@@ -286,7 +286,16 @@ function storeSessionData() {
     }
 }
 
-
+add_action('wp_footer', 'debug_session_data');
+function debug_session_data() {
+    if (session_id()) {
+        echo '<!--';
+        echo '<pre>';
+        print_r($_SESSION);
+        echo '</pre>';
+        echo '-->';
+    }
+}
 
 // black thumbnails - fix alpha channel
 /**

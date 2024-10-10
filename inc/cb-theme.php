@@ -247,6 +247,13 @@ function cb_theme_enqueue()
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
 
+add_action('init', 'start_custom_session', 1);
+function start_custom_session() {
+    if (!session_id()) {
+        session_start();
+    }
+    storeSessionData();
+}
 
 function storeSessionData() {
     if (!isset($_SESSION['data_captured'])) {

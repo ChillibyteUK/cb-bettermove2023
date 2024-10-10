@@ -10,6 +10,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 session_start();
+storeSessionData();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

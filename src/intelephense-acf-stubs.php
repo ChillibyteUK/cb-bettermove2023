@@ -17682,3 +17682,4 @@ function understrap_body_attributes($key = '')
 class Understrap_WP_Bootstrap_Navwalker{};
 
 function yoast_breadcrumb() {}
+function rgar() {}

@@ -154,9 +154,8 @@ function post_to_third_party( $entry, $form ) {
         <leadgroup>56597</leadgroup>
         <site>0</site>
         <status>New</status>
-        <source>" . $sessionData['referring_url'] . "</source>
-        <medium>" . $sessionData['utm_medium'] . "</medium>
-        <term>" . $sessionData['utm_term'] . "</term>
+        <medium>Contact form</medium>
+        <term>" . rgar( $entry, 6 ) . "</term>
         <firstname>" . rgar( $entry, '5.3' ) . "</firstname>
         <lastname>" . rgar( $entry, '5.6' ) . "</lastname>
         <phone1>" . rgar( $entry, 3 ) . "</phone1>

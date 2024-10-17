@@ -10,7 +10,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 session_start();
-// storeSessionData();
+storeSessionData();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -89,19 +89,18 @@ wp_head();
         {
             "@context": "http://schema.org",
             "@type": "Organization",
-            "name": "---",
+            "name": "Blootek Ventures Limited",
             "url": "https://www.bettermove.co.uk/",
             "logo": "https://www.bettermove.com/wp-content/theme/cb-bettermove2023/img/bm-logo.png",
             "description": "...",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "---",
-                "addressLocality": "---",
-                "addressRegion": "---",
-                "postalCode": "--- ---",
+                "streetAddress": "20-22 Bridge End",
+                "addressRegion": "Leeds",
+                "postalCode": "LS1 4DJ",
                 "addressCountry": "UK"
             },
-            "telephone": "+44 (0) ---- ------",
+            "telephone": "+44 (0) 330 0040050",
             "email": "hello@bettermove.co.uk"
         }
         }

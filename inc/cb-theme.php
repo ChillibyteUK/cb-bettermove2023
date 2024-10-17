@@ -282,7 +282,7 @@ function storeSessionData() {
         // Mark data as captured
         $_SESSION['data_captured'] = true;
     }
-}}
+}
 
 // add_action('wp_footer', 'debug_session_data');
 function debug_session_data() {

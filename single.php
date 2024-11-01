@@ -40,33 +40,22 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 }
                 ?>
 
-                <div class="social-share">
-                    <p>Share this article:</p>
-                    <ul class="social-share-icons d-flex justify-content-start align-items-center gap-2">
-                        <!-- Facebook Share -->
-                        <li>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook-f" title="Share on Facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title() . ' ' . get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-twitter" title="Share on X"></i>
-                            </a>
-                        </li>
-                        <!-- LinkedIn Share -->
-                        <li>
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode(get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-linkedinin" title="Share on LinkedIn"></i>
-                            </a>
-                        </li>
-                        <!-- Email Share -->
-                        <li>
-                            <a href="mailto:?subject=<?php echo rawurlencode(get_the_title()); ?>&body=<?php echo rawurlencode('Check out this post: ' . get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-envelope" title="Share via Email"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="social-share mt-5">
+                    <div>Share this article:</div>
+                    <div class="d-flex justify-content-start align-items-center gap-3">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-2x fa-facebook-f" title="Share on Facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title() . ' ' . get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-2x fa-twitter" title="Share on X"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode(get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-2x fa-linkedin-in" title="Share on LinkedIn"></i>
+                        </a>
+                        <a href="mailto:?subject=<?php echo rawurlencode(get_the_title()); ?>&body=<?php echo rawurlencode('Check out this post: ' . get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-2x fa-envelope" title="Share via Email"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>

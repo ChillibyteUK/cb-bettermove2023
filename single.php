@@ -51,7 +51,7 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         </li>
                         <li>
                             <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title() . ' ' . get_permalink()); ?>" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-x-twitter" title="Share on X"></i>
+                                <i class="fab fa-twitter" title="Share on X"></i>
                             </a>
                         </li>
                         <!-- LinkedIn Share -->

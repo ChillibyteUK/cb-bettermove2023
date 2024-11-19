@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/latest_blogs.css">
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/latest_blogs.css">
 <!-- latest_guides -->
 <section class="latest_guides">
     <div class="has-grey-background-color">

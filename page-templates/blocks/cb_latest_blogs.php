@@ -34,7 +34,7 @@
 }
 
 .bg-grey--half {
-    background-image: url("data:image/svg+xml,<?xmlversion='1.0'encoding='UTF-8'?><svgid='Layer_2'data-name='Layer2'xmlns='http://www.w3.org/2000/svg'viewBox='008.47504'><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff0f0;}</style></defs><gid='Layer_1-2'data-name='Layer1'><rectclass='cls-2'width='8.47'height='252'/><rectclass='cls-1'y='252'width='8.47'height='252'/></g></svg>");
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_2' data-name='Layer 2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.47 504'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; %7D .cls-2 %7B fill: %23fff0f0; %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Crect class='cls-2' width='8.47' height='252'/%3E%3Crect class='cls-1' y='252' width='8.47' height='252'/%3E%3C/g%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
 }

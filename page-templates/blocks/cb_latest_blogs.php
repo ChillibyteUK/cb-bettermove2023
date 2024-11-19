@@ -39,7 +39,7 @@
                 }
                 ?>
             </div>
-            <div class="text-center"><a href="/blog/" class="btn btn--accent">View All Blogs</a></div>
+            <div class="text-center"><a href="/blog/" class="btn btn-primary btn-arrow">View All Blogs</a></div>
         </div>
     </div>
 </section>

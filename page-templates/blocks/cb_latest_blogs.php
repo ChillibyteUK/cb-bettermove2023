@@ -1,43 +1,4 @@
-<style>
-.blog_card__image {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-.blog_card__content {
-    padding: .5rem;
-}
-
-.blog_card__title {
-    font-size: 1.1rem;
-}
-
-.blog_card {
-    background-color: var(--col-grey);
-    border-radius: 1rem;
-    height: 100%;
-    text-decoration: none;
-    display: block;
-    color: #000;
-    transition: all .3s ease-out;
-    box-shadow: rgba(0, 0, 0, .16) 0 3px 6px, rgba(0, 0, 0, .23) 0 3px 6px;
-}
-
-.has-grey-background-color {
-    background-color: var(--col-secondary-200);
-}
-
-.bg-grey--half {
-    background-size: cover;
-    background-position: center;
-}
-</style>
+<link rel="stylesheet" href="<?php echo echo get_template_directory_uri(); ?>/css/latest_blogs.css">
 <!-- latest_guides -->
 <section class="latest_guides">
     <div class="has-grey-background-color">

@@ -246,12 +246,21 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
-            'name'				=> 'cb_exit',
-            'title'				=> __('CB Exit Intent Popup'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/cb_exit.php',
-            'mode'	=> 'edit',
+            'name'              => 'cb_exit',
+            'title'             => __('CB Exit Intent Popup'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_exit.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_latest_blogs',
+            'title'             => __('CB Latest Blogs'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_latest_blogs.php',
+            'mode'  => 'edit',
             'supports' => array('mode' => false),
         ));
 

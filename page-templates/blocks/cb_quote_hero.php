@@ -5,7 +5,7 @@ $bg = wp_get_attachment_image_url(get_field('background'), 'full');
 <section class="quote_hero">
     <div class="container-xl py-5" style="background-image:url(<?=$bg?>)">
         <h1 class="mb-5">
-            <?=get_field('title')?><br>
+            <?=get_field('title')?><br class="d-none d-md-block">
             <span class="smaller">to sell your property</span>
         </h1>
         <!-- <div class="pre_form">Get a <span>cash offer</span> on your home today!</div> -->

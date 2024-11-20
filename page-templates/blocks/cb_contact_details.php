@@ -16,6 +16,11 @@
                         <?=get_field('contact_address', 'options')?>
                     </li>
                 </ul>
+                <!-- TrustBox widget - Flex -->
+                <div class="trustpilot-widget" data-locale="en-US" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="53256fbc000064000578657f"  data-style-width="100%" data-style-size="M" data-border-type="shadow" data-headline="star" data-support-text="review-number" data-brand-color="#f3948c" data-contrast-color="#2f2f2f" style="max-width: fit-content; position: relative;">
+                    <a href="https://www.trustpilot.com/review/www.bettermove.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                </div>
+                <!-- End TrustBox widget -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.7812067284144!2d-1.5444309232409046!3d53.79338157242242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c188c91438f%3A0xa0f836a786ce3a0e!2s20-22%20Bridge%20End%2C%20Leeds%20LS1%204DJ!5e0!3m2!1sen!2suk!4v1692360950937!5m2!1sen!2suk"
                     width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"

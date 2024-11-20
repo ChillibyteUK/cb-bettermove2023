@@ -16,9 +16,9 @@
                         <?=get_field('contact_address', 'options')?>
                     </li>
                 </ul>
-                <div class="mb-4 w-100">
+                <div class="mb-5">
                     <!-- TrustBox widget - Flex -->
-                    <div class="trustpilot-widget" data-locale="en-US" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="53256fbc000064000578657f"  data-style-width="100%" data-style-size="M" data-border-type="shadow" data-headline="star" data-support-text="review-number" data-brand-color="#f3948c" data-contrast-color="#2f2f2f" style="max-width: fit-content; position: relative;">
+                    <div class="trustpilot-widget" data-locale="en-US" data-template-id="54197383fd9dceac42a68694" data-businessunit-id="53256fbc000064000578657f"  data-style-width="100%" data-style-size="M" data-border-type="shadow" data-headline="star" data-support-text="review-number" data-brand-color="#f3948c" data-contrast-color="#2f2f2f">
                         <a href="https://www.trustpilot.com/review/www.bettermove.co.uk" target="_blank" rel="noopener">Trustpilot</a>
                     </div>
                     <!-- End TrustBox widget -->

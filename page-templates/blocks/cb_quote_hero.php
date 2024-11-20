@@ -13,6 +13,7 @@ $bg = wp_get_attachment_image_url(get_field('background'), 'full');
             <?=do_shortcode('[gravityform id="1"]')?>
         </div>
         <?php
+        //Show bullets
         if ( get_field("bullet_1") ) {
         ?>
         <section class="bullets pt-4">

@@ -48,7 +48,7 @@ add_action('wp_footer', function () {
                 {
                     breakpoint: 576,
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1,
                         dots: true
                     }
                 }

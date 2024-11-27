@@ -16,7 +16,7 @@
                     alt="OnTheMarket">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png"
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png"
                     alt="PrimeLocation">
             </div>
         </div>
@@ -49,6 +49,7 @@ add_action('wp_footer', function () {
                     breakpoint: 576,
                     settings: {
                         slidesToShow: 1
+                        dots: true
                     }
                 }
             ]

@@ -4,19 +4,19 @@
         <h2 class="mb-5">Appearing on</h2>
         <div class="portalslick">
             <div class="">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/logo-rightmove.png"
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png"
                     alt="rightmove">
             </div>
             <div class="">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/logo-zoopla.png"
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png"
                     alt="Zoopla">
             </div>
             <div class="">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/logo-onthemarket.png"
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png"
                     alt="OnTheMarket">
             </div>
             <div class="">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/logo-primelocation.png"
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png"
                     alt="PrimeLocation">
             </div>
         </div>

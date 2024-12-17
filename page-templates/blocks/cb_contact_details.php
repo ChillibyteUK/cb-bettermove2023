@@ -32,9 +32,9 @@
                 <div class="contact_details__form">
                     <?
                     if ( is_page(108308) ) {
-                        echo do_shortcode('[gravityform id="9" title="false"]')
+                        echo do_shortcode('[gravityform id="9" title="false"]');
                     } else {
-                        echo do_shortcode('[gravityform id="3" title="false"]')
+                        echo do_shortcode('[gravityform id="3" title="false"]');
                     }
                     ?>
                 </div>

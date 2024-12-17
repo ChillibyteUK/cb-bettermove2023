@@ -135,6 +135,28 @@ function unlisted_property_redirect()
     }
 }
 
+function bg_disable_front_page_wpseo_next_rel_link( $link ) {
+    if ( is_home() ) {
+        return false;
+    }
+
+    return $link;
+}
+add_filter( 'wpseo_next_rel_link', 'bg_disable_front_page_wpseo_next_rel_link' );
+
+// Function to get session data
+function getSessionData() {
+    $sessionData = [
+        'referring_url' => isset($_SESSION['referring_url']) ? $_SESSION['referring_url'] : '',
+        'first_page' => isset($_SESSION['first_page']) ? $_SESSION['first_page'] : '',
+        'utm_source' => isset($_SESSION['utm_source']) ? $_SESSION['utm_source'] : '',
+        'utm_medium' => isset($_SESSION['utm_medium']) ? $_SESSION['utm_medium'] : '',
+        'utm_term' => isset($_SESSION['utm_term']) ? $_SESSION['utm_term'] : '',
+    ];
+        
+    return $sessionData;
+}
+
 add_action( 'gform_after_submission_7', 'post_to_third_party', 10, 2 );
 function post_to_third_party( $entry, $form ) {
 
@@ -187,17 +209,9 @@ function post_to_third_party( $entry, $form ) {
     GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response_json, true ) );
 }
 
-function bg_disable_front_page_wpseo_next_rel_link( $link ) {
-    if ( is_home() ) {
-        return false;
-    }
+add_action( 'gform_after_submission_9', 'post_to_third_party_9', 10, 2 );
+function post_to_third_party_9( $entry, $form ) {
 
-    return $link;
-}
-add_filter( 'wpseo_next_rel_link', 'bg_disable_front_page_wpseo_next_rel_link' );
-
-// Function to get session data
-function getSessionData() {
     $sessionData = [
         'referring_url' => isset($_SESSION['referring_url']) ? $_SESSION['referring_url'] : '',
         'first_page' => isset($_SESSION['first_page']) ? $_SESSION['first_page'] : '',
@@ -205,6 +219,40 @@ function getSessionData() {
         'utm_medium' => isset($_SESSION['utm_medium']) ? $_SESSION['utm_medium'] : '',
         'utm_term' => isset($_SESSION['utm_term']) ? $_SESSION['utm_term'] : '',
     ];
-        
-    return $sessionData;
+
+    $url = "https://bettermove.flg360.co.uk/api/APILeadCreateUpdate.php";
+    $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+        <data>
+            <lead>
+                <key>vrShN7qYL7q1Zf6GfzpVwKyEBddWSZBf</key>
+                <leadgroup>56597</leadgroup>
+                <site>0</site>
+                <status>New</status>
+                <source>OTM</source>
+                <firstname>" . rgar( $entry, 6 ) . "</firstname>
+                <lastname>" . rgar( $entry, 8 ) . "</lastname>
+                <phone1>" . rgar( $entry, 2 ) . "</phone1>
+                <email>" . rgar( $entry, 3 ) . "</email>
+                <contactphone>Yes</contactphone>
+                <contactsms>Yes</contactsms>
+                <contactemail>Yes</contactemail>
+                <contactmail>Yes</contactmail>
+                <contactfax>Yes</contactfax>
+                <contacttime>Anytime</contacttime>
+            </lead>
+        </data>";
+
+    $response_json = wp_remote_post( 
+        $url, 
+        array(
+            'method' => 'POST',
+            'timeout' => 45,
+            'redirection' => 5,
+            'httpversion' => '1.0',
+            'headers' => array("Content-type" => "application/xml"),
+            'body' => $xml,
+            'sslverify' => false
+        )
+    );
+    GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response_json, true ) );
 }

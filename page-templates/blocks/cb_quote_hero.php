@@ -23,31 +23,70 @@ if ( is_page(108899) ) {
     </div>
 </section>
 
-<div class="container-xl py-5">
-    <div class="row">
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/napb-logo.jpg" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/gov-uk.png" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/logo-ombudsman--dk.png" class="img-fluid">
-        </div>
-        <div class="col">
-            <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png" class="img-fluid">
+<section class="portals py-5 has-primary-400-color">
+    <div class="container-xl text-center">
+        <div class="portalslicknew">
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/napb-logo.jpg" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/gov-uk.png" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/logo-ombudsman--dk.png" class="img-fluid" style="max-height: 50px;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png" class="img-fluid" style="max-height: 50px;">
+            </div>
         </div>
     </div>
-</div>
+</section>
+<?php
+add_action('wp_footer', function () {
+?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    (function($) {
+        $('.portalslicknew').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            speed: 300,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        dots: true
+                    }
+                }
+            ]
+        })
+    })(jQuery);
+</script>
+<?php
+}, 9999);
+?>
 
 <div class="quote_hero__usp">
     <div class="container-xl py-5">

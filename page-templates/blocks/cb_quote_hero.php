@@ -104,7 +104,7 @@ add_action('wp_footer', function () {
     }  
 }
 </style>
-<div class="container-fluid" class="split-bg">
+<div class="container-fluid split-bg">
     <div class="container-xl">
         <div class="row">
             <div class="col-md-6 p-5">

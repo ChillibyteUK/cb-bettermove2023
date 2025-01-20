@@ -88,13 +88,19 @@ add_action('wp_footer', function () {
 }, 9999);
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 has-grey-200-background-color">
-            <h2>We find you a buyer</h2>
-        </div>
-        <div class="col-md-6 has-secondary-200-background-color">
-            <h2>We buy your propertyIn</h2>
+<div class="container-fluid" style="background: linear-gradient(to right, #f1f4f5 0%, #f1f4f5 50%, #fbeae8 50%, #fbeae8 100%);">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-md-6 py-4">
+                <h2>We find you a buyer</h2>
+                <p>In 30 days or less we matchmake your propertywith one of our pre-approved cash buyers.</p>
+                <a href="/get-your-cash-offer/" class="btn btn-primary btn-arrow">Find my buyer</a>
+            </div>
+            <div class="col-md-6 py-4">
+                <h2>We buy your property</h2>
+                <p>We use our funds to buy your property directly from you in a timeframe that suits you.</p>
+                <a href="/get-your-cash-offer/" class="btn btn-primary btn-arrow">Buy my property</a>
+            </div>
         </div>
     </div>
 </div>

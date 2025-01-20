@@ -27,11 +27,23 @@ if ( is_page(108899) ) {
     <div class="row">
         <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/napb-logo.jpg" class="img-fluid">
+        </div>
+        <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png" class="img-fluid">
+        </div>
+        <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/gov-uk.png" class="img-fluid">
+        </div>
+        <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png" class="img-fluid">
+        </div>
+        <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png" class="img-fluid">
+        </div>
+        <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/logo-ombudsman--dk.png" class="img-fluid">
+        </div>
+        <div class="col">
             <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png" class="img-fluid">
         </div>
     </div>

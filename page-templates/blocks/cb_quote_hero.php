@@ -27,25 +27,25 @@ if ( is_page(108899) ) {
     <div class="container-xl text-center">
         <div class="portalslicknew">
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/napb-logo.jpg" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/napb-logo.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/gov-uk.png" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/gov-uk.png" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/logo-ombudsman--dk.png" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/logo-ombudsman--dk.png" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png" class="img-fluid" style="max-height: 50px;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
         </div>
     </div>
@@ -77,7 +77,7 @@ add_action('wp_footer', function () {
                     breakpoint: 576,
                     settings: {
                         slidesToShow: 1,
-                        dots: true
+                        dots: false
                     }
                 }
             ]

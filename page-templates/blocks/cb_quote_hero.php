@@ -20,6 +20,11 @@ if ( is_page(108899) ) {
             </div>
             <!-- End TrustBox widget -->
         </div>
+        <div class="row mt-4">
+            <div class="col-md-3">Homeowners</div>
+            <div class="col-md-3">Landlords</div>
+            <div class="col-md-3">Investors</div>
+        </div>
     </div>
 </section>
 
@@ -88,15 +93,26 @@ add_action('wp_footer', function () {
 }, 9999);
 ?>
 
-<div class="container-fluid" style="background: linear-gradient(to right, #f1f4f5 0%, #f1f4f5 50%, #fbeae8 50%, #fbeae8 100%);">
+<style>
+.split-bg {
+    background: #f1f4f5;
+}
+
+@media (min-width: 768px) {
+    .split-bg {
+        background: linear-gradient(to right, #f1f4f5 0%, #f1f4f5 50%, #fbeae8 50%, #fbeae8 100%);
+    }  
+}
+</style>
+<div class="container-fluid" class="split-bg">
     <div class="container-xl">
         <div class="row">
-            <div class="col-md-6 py-4">
+            <div class="col-md-6 p-5">
                 <h2>We find you a buyer</h2>
                 <p>In 30 days or less we matchmake your propertywith one of our pre-approved cash buyers.</p>
                 <a href="/get-your-cash-offer/" class="btn btn-primary btn-arrow">Find my buyer</a>
             </div>
-            <div class="col-md-6 py-4">
+            <div class="col-md-6 p-5">
                 <h2>We buy your property</h2>
                 <p>We use our funds to buy your property directly from you in a timeframe that suits you.</p>
                 <a href="/get-your-cash-offer/" class="btn btn-primary btn-arrow">Buy my property</a>

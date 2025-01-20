@@ -88,6 +88,17 @@ add_action('wp_footer', function () {
 }, 9999);
 ?>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 has-grey-200-background-color">
+            <h2>We find you a buyer</h2>
+        </div>
+        <div class="col-md-6 has-secondary-200-background-color">
+            <h2>We buy your propertyIn</h2>
+        </div>
+    </div>
+</div>
+
 <div class="quote_hero__usp">
     <div class="container-xl py-5">
         <div class="icon_grid">

@@ -21,9 +21,9 @@ if ( is_page(108899) ) {
             <!-- End TrustBox widget -->
         </div>
         <div class="row mt-4">
-            <div class="col-md-3">Homeowners</div>
-            <div class="col-md-3">Landlords</div>
-            <div class="col-md-3">Investors</div>
+            <div class="col-md-2">Homeowners</div>
+            <div class="col-md-2">Landlords</div>
+            <div class="col-md-2">Investors</div>
         </div>
     </div>
 </section>

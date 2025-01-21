@@ -109,7 +109,7 @@ add_action('wp_footer', function () {
         <div class="row">
             <div class="col-md-6 p-5">
                 <h2>We find you a buyer</h2>
-                <p>In 30 days or less we matchmake your propertywith one of our pre-approved cash buyers.</p>
+                <p>In 30 days or less we matchmake your property with one of our pre-approved cash buyers.</p>
                 <a href="/get-your-cash-offer/" class="btn btn-primary btn-arrow">Find my buyer</a>
             </div>
             <div class="col-md-6 p-5">

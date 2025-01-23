@@ -123,7 +123,7 @@ add_action('wp_footer', function () {
 
 <div class="quote_hero__usp">
     <div class="container-xl py-5">
-        <div class="icon_grid">
+        <div class="icon_grid mb-0">
             <div>
                 <img
                     src="<?=get_stylesheet_directory_uri()?>/img/icons/icon--heart.svg">
@@ -176,7 +176,7 @@ add_action('wp_footer', function () {
 </section>
 <div class="quote_hero__usp">
     <div class="container-xl py-5">
-        <div class="icon_grid mb-0">
+        <div class="icon_grid">
             <div>
                 <img
                     src="<?=get_stylesheet_directory_uri()?>/img/icons/icon--heart.svg">

@@ -30,7 +30,16 @@ if ( is_page(108899) ) {
 
 <section class="portals py-5 has-primary-400-color">
     <div class="container-xl text-center">
-        <div class="portalslicknew">
+        <div class="d-none d-flex-md flex-wrap justify-content-between align-items-center">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/napb.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/rightmove.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/gov.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/zoopla.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/onthemarket.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/ombudsman.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/primelocation.jpg" class="img-fluid" style="max-height: 50px;">
+        </div>
+        <div class="portalslicknew d-md-none">
             <div class="">
                 <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/napb.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>

@@ -32,25 +32,25 @@ if ( is_page(108899) ) {
     <div class="container-xl text-center">
         <div class="portalslicknew">
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/napb-logo.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/napb.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/rightmove.png" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/rightmove.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/gov-uk.png" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/gov.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/zoopla.png" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/zoopla.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/onthemarket.png" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/onthemarket.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/logo-ombudsman--dk.png" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/ombudsman.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
             <div class="">
-                <img src="https://www.bettermove.co.uk/wp-content/uploads/2024/11/primelocation.png" class="img-fluid" style="max-height: 50px; margin: auto;">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/primelocation.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
         </div>
     </div>

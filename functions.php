@@ -235,6 +235,7 @@ function post_to_third_party( $entry, $form ) {
         )
     );
     GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response_json, true ) );
+    GFCommon::log_debug( 'stuff sent: response => ' . print_r( $xml, true ) );
 }
 
 add_action( 'gform_after_submission_9', 'post_to_third_party_9', 10, 2 );

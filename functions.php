@@ -157,9 +157,36 @@ function getSessionData() {
     return $sessionData;
 }
 
+function extractPostcode($address) {
+    // UK postcode regex pattern
+    $postcodePattern = "/\b([A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2})\b/i";
+
+    // Match the postcode in the address
+    if (preg_match($postcodePattern, $address, $matches)) {
+        return $matches[1]; // Return the matched postcode
+    }
+
+    return null; // Return null if no postcode is found
+}
+
+function removePostcode($address) {
+    // UK postcode regex pattern
+    $postcodePattern = "/\b([A-Z]{1,2}[0-9][0-9A-Z]?\s?[0-9][A-Z]{2})\b/i";
+
+    // Remove postcode from address
+    $cleanedAddress = preg_replace($postcodePattern, '', $address);
+
+    // Trim extra spaces
+    return trim($cleanedAddress);
+}
+
 add_action( 'gform_after_submission_7', 'post_to_third_party', 10, 2 );
 function post_to_third_party( $entry, $form ) {
-
+    $address = rgar($entry, '2');
+    $postcode = extractPostcode($address);
+    $address = removePostcode($address);
+    $address = str_replace(" , ", ", ", $address);
+    
     $sessionData = [
         'referring_url' => isset($_SESSION['referring_url']) ? $_SESSION['referring_url'] : '',
         'first_page' => isset($_SESSION['first_page']) ? $_SESSION['first_page'] : '',
@@ -190,7 +217,8 @@ function post_to_third_party( $entry, $form ) {
         <contactmail>Yes</contactmail>
         <contactfax>Yes</contactfax>
         <contacttime>Anytime</contacttime>
-        <address>" . rgar( $entry, 2 ) . "</address>
+        <address>" . $address . "</address>
+        <postcode>" . $postcode . "</postcode>
       </lead>
     </data>";
 

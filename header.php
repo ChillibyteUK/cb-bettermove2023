@@ -85,26 +85,41 @@ if (get_field('bing_site_verification', 'options')) {
 wp_head();
 ?>
 
+<?php
+if ( is_front_page() ) {
+?>
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Blootek Ventures Limited",
-            "url": "https://www.bettermove.co.uk/",
-            "logo": "https://www.bettermove.com/wp-content/theme/cb-bettermove2023/img/bm-logo.png",
-            "description": "...",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "20-22 Bridge End",
-                "addressRegion": "Leeds",
-                "postalCode": "LS1 4DJ",
-                "addressCountry": "UK"
-            },
-            "telephone": "+44 (0) 330 0040050",
-            "email": "hello@bettermove.co.uk"
-        }
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bettermove",
+      "url": "https://www.bettermove.co.uk/",
+      "logo": "https://www.bettermove.co.uk/wp-content/themes/cb-bettermove2023/img/bm-logo.svg",
+      "description": "Bettermove is a UK-based company that provides homeowners with a straightforward, transparent, and fee-free service for selling their properties. They offer two main options for selling: direct purchase, where Bettermove buys the property directly using their own funds, enabling a quick sale that can be completed in as little as seven days depending on the homeowner's timeline; and buyer matching, where they match the property with pre-approved cash buyers from their network, aiming to secure a sale within 30 days. Bettermove charges no fees or commissions and even covers legal fees related to the sale. The company is regulated by The Property Ombudsman and is a member of the National Association of Property Buyers, ensuring transparency and adherence to industry standards.",
+       "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "20-22 Bridge End",
+                    "addressRegion": "Leeds",
+                    "postalCode": "LS1 4DJ",
+                    "addressCountry": "UK"
+                },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44 (0) 330 0040050",
+        "email": "hello@bettermove.co.uk",
+        "areaServed": "GB",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://www.instagram.com/bettermoveagent/",
+        "https://www.facebook.com/bettermoveagent/",
+        "https://x.com/bettermoveagent"
+      ]
+    }
     </script>
+<?php
+}
+?>
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- End TrustBox script -->

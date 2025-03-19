@@ -210,12 +210,21 @@ function acf_blocks()
             'supports' => array('mode' => false, 'color' => true),
         ));
         acf_register_block_type(array(
-            'name'				=> 'cb_form',
-            'title'				=> __('CB Form Block'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/cb_form.php',
-            'mode'	=> 'edit',
+            'name'              => 'cb_form',
+            'title'             => __('CB Form Block'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_form.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false, 'color' => true),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_vimeo',
+            'title'             => __('CB Vimeo Block'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_vimeo.php',
+            'mode'  => 'edit',
             'supports' => array('mode' => false, 'color' => true),
         ));
         acf_register_block_type(array(

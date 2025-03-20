@@ -1,11 +1,11 @@
 <?php
 if (get_field('display') == 'centre') {
 ?>
-<section class="cb_vimeo">
+<section class="cb_vimeo <?=get_field("background_colour")?>">
     <div class="container-xl py-5">
         <div class="row">
             <div class="align-items-center g-5 text-center">
-                <h2><?=get_field('title')?></h2>
+                <<?=get_field('title_type')?> class="h2"><?=get_field('title')?></<?=get_field('title_type')?>>
                 <div class="mb-4 mt-0">
                     <?=get_field('text')?>
                 </div>
@@ -18,11 +18,11 @@ if (get_field('display') == 'centre') {
 <?php
 } elseif (get_field('display') == 'right') {
 ?>
-<section class="cb_vimeo">
+<section class="cb_vimeo <?=get_field("background_colour")?>">
     <div class="container-xl py-5">
         <div class="row">
             <div class="align-items-center g-5 col-md-6">
-                <h2><?=get_field('title')?></h2>
+                <<?=get_field('title_type')?> class="h2"><?=get_field('title')?></<?=get_field('title_type')?>>
                 <div class="mb-4 mt-0">
                     <?=get_field('text')?>
                 </div>
@@ -38,7 +38,7 @@ if (get_field('display') == 'centre') {
 <?php
 } else {
 ?>
-<section class="cb_vimeo">
+<section class="cb_vimeo <?=get_field("background_colour")?>">
     <div class="container-xl py-5">
         <div class="row">
             <div class="align-items-center g-5 col-md-6">
@@ -47,7 +47,7 @@ if (get_field('display') == 'centre') {
                 </div>
             </div>
             <div class="align-items-center g-5 col-md-6">
-                <h2><?=get_field('title')?></h2>
+                <<?=get_field('title_type')?> class="h2"><?=get_field('title')?></<?=get_field('title_type')?>>
                 <div class="mb-4 mt-0">
                     <?=get_field('text')?>
                 </div>

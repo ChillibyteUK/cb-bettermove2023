@@ -1,7 +1,5 @@
 <?php
-echo get_field('display');
-
-if (get_field('display') == 'center') {
+if (get_field('display') == 'centre') {
 ?>
 <section class="cb_vimeo">
     <div class="container-xl py-5">

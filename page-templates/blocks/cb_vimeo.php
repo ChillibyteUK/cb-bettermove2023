@@ -57,4 +57,3 @@ if (get_field('display') == 'centre') {
 </section>
 <?php
 }
-?>

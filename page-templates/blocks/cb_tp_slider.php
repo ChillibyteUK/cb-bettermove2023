@@ -1,3 +1,39 @@
+<section class="tp_slider portals py-5 has-primary-400-color">
+    <div class="container-xl text-center">
+        <div class="d-none d-lg-flex flex-wrap justify-content-between align-items-center">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/napb.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/rightmove.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/gov.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/zoopla.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/onthemarket.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/ombudsman.jpg" class="img-fluid" style="max-height: 50px;">
+            <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/primelocation.jpg" class="img-fluid" style="max-height: 50px;">
+        </div>
+        <div class="portalslicknew d-lg-none">
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/napb.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/rightmove.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/gov.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/zoopla.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/onthemarket.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/ombudsman.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+            <div class="">
+                <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/primelocation.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
+            </div>
+        </div>
+    </div>
+</section>
 <section class="tp_slider py-5">
     <div class="container-xl">
         <div class="tp_slider__slider">
@@ -33,30 +69,20 @@ add_action('wp_footer', function () {
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script>
     (function($) {
-        $('.tp_slider__slider').slick({
+        $('.portalslicknew').slick({
             dots: false,
             arrows: false,
             infinite: true,
             autoplay: true,
             speed: 300,
-            slidesToShow: 5,
+            slidesToShow: 7,
             slidesToScroll: 1,
-            responsive: [{
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                },
+            responsive: [
                 {
                     breakpoint: 576,
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1,
+                        dots: false
                     }
                 }
             ]

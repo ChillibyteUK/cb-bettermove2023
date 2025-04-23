@@ -65,7 +65,15 @@ add_shortcode('social_tw_icon', function () {
     $social = get_field('social', 'options');
     $twurl = $social['twitter_url'];
     if ($twurl != '') {
-        return '<a href="' . $twurl . '" target="_blank"><i class="fa-brands fa-twitter"></i></a>';
+        return '<a href="' . $twurl . '" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>';
+    }
+    return;
+});
+add_shortcode('social_threads_icon', function () {
+    $social = get_field('social', 'options');
+    $twurl = $social['threads_url'];
+    if ($twurl != '') {
+        return '<a href="' . $twurl . '" target="_blank"><i class="fa-brands fa-threads"></i></a>';
     }
     return;
 });

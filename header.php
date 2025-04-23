@@ -143,6 +143,8 @@ do_action('wp_body_open');
                 <?=do_shortcode('[social_fb_icon]')?>
                 <?=do_shortcode('[social_tw_icon]')?>
                 <?=do_shortcode('[social_ig_icon]')?>
+                <?=do_shortcode('[social_threads_icon]')?>
+                <?=do_shortcode('[social_yt_icon]')?>
             </span>
         </div>
     </div>

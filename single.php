@@ -46,8 +46,8 @@ $img = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-2x fa-facebook-f" title="Share on Facebook"></i>
                         </a>
-                        <a href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_title() . ' ' . get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-2x fa-twitter" title="Share on X"></i>
+                        <a href="https://x.com/intent/post?text=<?php echo urlencode(get_the_title() . ' ' . get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-2x fa-x-twitter" title="Share on X"></i>
                         </a>
                         <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode(get_permalink()); ?>" class="has-secondary-400-color" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-2x fa-linkedin-in" title="Share on LinkedIn"></i>

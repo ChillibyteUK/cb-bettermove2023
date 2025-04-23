@@ -1,4 +1,4 @@
-<section class="tp_slider portals py-5 has-primary-400-color">
+<section class="portals py-5 has-primary-400-color">
     <div class="container-xl text-center">
         <div class="d-none d-lg-flex flex-wrap justify-content-between align-items-center">
             <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/napb.jpg" class="img-fluid" style="max-height: 50px;">
@@ -31,27 +31,6 @@
             <div class="">
                 <img src="https://www.bettermove.co.uk/wp-content/uploads/2025/01/primelocation.jpg" class="img-fluid" style="max-height: 50px; margin: auto;">
             </div>
-        </div>
-    </div>
-</section>
-<section class="tp_slider py-5">
-    <div class="container-xl">
-        <div class="tp_slider__slider">
-            <div class="tp_slider__card"><img
-                    src="<?=get_stylesheet_directory_uri()?>/img/napb-logo.jpg"
-                    alt=""></div>
-            <div class="tp_slider__card"><img
-                    src="<?=get_stylesheet_directory_uri()?>/img/logo-ombudsman--dk.png"
-                    alt=""></div>
-            <div class="tp_slider__card"><img
-                    src="<?=get_stylesheet_directory_uri()?>/img/gov-uk.png"
-                    alt=""></div>
-            <div class="tp_slider__card"><img
-                    src="<?=get_stylesheet_directory_uri()?>/img/all-agents.png"
-                    alt=""></div>
-            <div class="tp_slider__card"><img
-                    src="<?=get_stylesheet_directory_uri()?>/img/reviews-io-4.9.png"
-                    alt=""></div>
         </div>
     </div>
 </section>

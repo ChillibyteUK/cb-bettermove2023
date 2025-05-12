@@ -43,6 +43,9 @@ defined('ABSPATH') || exit;
                     src="<?=get_stylesheet_directory_uri()?>/img/logo-ombudsman.png">
             </div>
             <div><img
+                    src="<?=get_stylesheet_directory_uri()?>/img/trading-standards.jpg">
+            </div>
+            <div><img
                     src="<?=get_stylesheet_directory_uri()?>/img/napb-logo.jpg">
             </div>
             <div><img

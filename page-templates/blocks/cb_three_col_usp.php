@@ -14,7 +14,7 @@ if ( is_front_page() ) {
 }
 
 ?>
-<section class="three_col_usp py-4">
+<section class="three_col_usp py-4 has-grey-400-background-color">
     <div class="container-xl">
         <div class="row gx-4 gy-3 <?= esc_attr( $width ); ?> mx-auto">
             <div class="col-md-4 three_col_usp__item px-0 px-md-2">

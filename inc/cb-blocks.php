@@ -272,7 +272,6 @@ function acf_blocks()
             'mode'  => 'edit',
             'supports' => array('mode' => false),
         ));
-
         acf_register_block_type(array(
             'name'				=> 'cb_session_data',
             'title'				=> __('CB SESSION DATA'),
@@ -282,13 +281,21 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-        
         acf_register_block_type(array(
             'name'              => 'cb_three_col_usp',
             'title'             => __('CB Three Col USP'),
             'category'          => 'layout',
             'icon'              => 'cover-image',
             'render_template'   => 'page-templates/blocks/cb_three_col_usp.php',
+            'mode'  => 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'              => 'cb_hero_service',
+            'title'             => __('CB Hero Service'),
+            'category'          => 'layout',
+            'icon'              => 'cover-image',
+            'render_template'   => 'page-templates/blocks/cb_hero_service.php',
             'mode'  => 'edit',
             'supports' => array('mode' => false),
         ));

@@ -1,8 +1,19 @@
 <section class="mb-5">
     <div class="container">
-        <div class="d-flex justify-content-between">
-            <div class="h2 text--black mb-4">TITLE GOES HERE</div>
-            <div class="h3 text--black mb-4">SUBTITLE GOES HERE</div>
+        <div class="row">
+            <?php
+            if(get_field('title')) {
+            ?>
+            <div class="h2 text--black mb-2"><?=get_field('title')?></div>
+            <?php
+            }
+
+            if(get_field('sub_title')) {
+            ?>
+            <div class="h3 text--black mb-4"><?=get_field('sub_title')?></div>
+            <?php
+            }
+            ?>
         </div>
         <div class="row g-4">
             <?php
@@ -21,7 +32,12 @@
                     ?>
                     <div class="col-lg-3 col-md-6 index_blog <?= $is_hidden ?>">
                         <a class="index_blog__card" href="<?= get_the_permalink() ?>">
-                            <img class="index_blog__image" src="<?= get_the_post_thumbnail_url(get_the_ID(), 'large') ?>">
+                            <?php
+                            $thumbnail_url = has_post_thumbnail() 
+                                ? get_the_post_thumbnail_url(get_the_ID(), 'large') 
+                                : '/wp-content/uploads/2025/07/holder.png'; // adjust the path to your actual placeholder
+                            ?>
+                            <img class="index_blog__image" src="<?= esc_url($thumbnail_url) ?>" alt="<?= esc_attr(get_the_title()) ?>">
                             <div class="index_blog__content">
                                 <h2 class="fs-5 index_blog__title pb-2 mb-0"><?= get_the_title() ?></h2>
                             </div>

@@ -1,4 +1,4 @@
-<section class="mb-5">
+<section class="mb-0 has-secondary-200-background-color py-5">
     <div class="container">
         <div class="row">
             <?php

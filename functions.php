@@ -186,6 +186,14 @@ function post_to_third_party( $entry, $form ) {
     $postcode = extractPostcode($address);
     $address = removePostcode($address);
     $address = str_replace(" , ", ", ", $address);
+
+    $is_letter = rgar( $entry, 6 );
+
+    if ( $is_letter == "Letter" ) {
+        $source = "Letter";
+    } else {
+        $source = $sessionData['referring_url'];
+    }
     
     $sessionData = [
         'referring_url' => isset($_SESSION['referring_url']) ? $_SESSION['referring_url'] : '',
@@ -203,7 +211,7 @@ function post_to_third_party( $entry, $form ) {
         <leadgroup>56597</leadgroup>
         <site>0</site>
         <status>New</status>
-        <source>" . $sessionData['referring_url'] . "</source>
+        <source>" . $source . "</source>
         <medium>" . $sessionData['utm_medium'] . "</medium>
         <term>" . $sessionData['utm_term'] . "</term>
         <data18>" . rgar( $entry, 6 ) . "</data18>

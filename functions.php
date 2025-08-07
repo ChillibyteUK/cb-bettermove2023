@@ -293,3 +293,42 @@ function post_to_third_party_9( $entry, $form ) {
     );
     GFCommon::log_debug( 'gform_after_submission: response => ' . print_r( $response_json, true ) );
 }
+
+/**
+ * Add BlogPosting schema to single post pages.
+ */
+function bm_add_blogposting_schema() {
+    if ( ! is_singular( 'post' ) ) {
+        return;
+    }
+
+    global $post;
+
+    // Build your schema data
+    $schema = [
+        '@context'        => 'https://schema.org',
+        '@type'           => 'BlogPosting',
+        'mainEntityOfPage'=> [
+            '@type' => 'WebPage',
+            '@id'   => get_permalink( $post ),
+        ],
+        'headline'        => get_the_title( $post ),
+        'description'     => get_the_excerpt( $post ),
+        'publisher'       => [
+            '@type' => 'Organization',
+            'name'  => get_bloginfo( 'name' ),
+            'logo'  => [
+                '@type' => 'ImageObject',
+                'url'   => get_stylesheet_directory_uri() . '/img/bm-logo.svg',
+            ],
+        ],
+        'datePublished'   => get_the_date( 'c', $post ),
+        'dateModified'    => get_the_modified_date( 'c', $post ),
+    ];
+
+    // Output the JSON-LD
+    echo "\n<script type=\"application/ld+json\">\n" 
+       . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT ) 
+       . "\n</script>\n";
+}
+add_action( 'wp_head', 'bm_add_blogposting_schema', 1 );

@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-6 mb-4">
                 <div class="contact_details__form">
-                    <?
+                    <?php
                     if ( is_page(108308) ) {
                         echo do_shortcode('[gravityform id="9" title="false"]');
                     } else {

@@ -332,3 +332,14 @@ function bm_add_blogposting_schema() {
        . "\n</script>\n";
 }
 add_action( 'wp_head', 'bm_add_blogposting_schema', 1 );
+
+// Remove duplicate front-page entry from Yoast's page sitemap.
+add_filter( 'wpseo_sitemap_entry', function ( $url, $type, $post ) {
+    if ( $type === 'post_type' && $post instanceof WP_Post ) {
+        $front_id = (int) get_option( 'page_on_front' );
+        if ( $front_id && (int) $post->ID === $front_id ) {
+            return false; // skip the page row; root / remains
+        }
+    }
+    return $url;
+}, 10, 3 );

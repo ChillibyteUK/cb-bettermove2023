@@ -332,3 +332,20 @@ function bm_add_blogposting_schema() {
        . "\n</script>\n";
 }
 add_action( 'wp_head', 'bm_add_blogposting_schema', 1 );
+
+// Remove duplicate homepage entry from Yoast sitemap.
+add_filter( 'wpseo_sitemap_post_type_archive_link', function( $url, $post_type ) {
+    // Don't change other post types.
+    if ( $post_type === 'page' ) {
+        return false; // Removes the duplicate homepage Page entry.
+    }
+    return $url;
+}, 10, 2 );
+
+add_filter( 'wpseo_exclude_from_sitemap_by_post_ids', function( $excluded ) {
+    $front_id = (int) get_option( 'page_on_front' );
+    if ( $front_id ) {
+        $excluded[] = $front_id;
+    }
+    return $excluded;
+});

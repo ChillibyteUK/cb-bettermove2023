@@ -8,9 +8,9 @@
  */
 
 // Exit if accessed directly.
-defined('ABSPATH') || exit;
+defined( 'ABSPATH' ) || exit;
 session_start();
-storeSessionData();
+store_session_data();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>

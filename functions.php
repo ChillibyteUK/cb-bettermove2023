@@ -205,13 +205,7 @@ function post_to_third_party( $entry, $form ) { // phpcs:ignore Generic.CodeAnal
     $address  = removePostcode( $address );
     $address  = str_replace( ' , ', ', ', $address );
 
-    $sessionData = array( // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
-        'referring_url' => isset( $_SESSION['referring_url'] ) ? $_SESSION['referring_url'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'first_page'    => isset( $_SESSION['first_page'] ) ? $_SESSION['first_page'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_source'    => isset( $_SESSION['utm_source'] ) ? $_SESSION['utm_source'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_medium'    => isset( $_SESSION['utm_medium'] ) ? $_SESSION['utm_medium'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_term'      => isset( $_SESSION['utm_term'] ) ? $_SESSION['utm_term'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized	
-	);
+    $sessionData = getSessionData(); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
 
     $is_letter = rgar( $entry, 6 );
 
@@ -275,13 +269,7 @@ add_action( 'gform_after_submission_7', 'post_to_third_party', 10, 2 );
  */
 function post_to_third_party_9( $entry, $form ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter
 
-    $sessionData = array( // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
-        'referring_url' => isset( $_SESSION['referring_url'] ) ? $_SESSION['referring_url'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'first_page'    => isset( $_SESSION['first_page'] ) ? $_SESSION['first_page'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_source'    => isset( $_SESSION['utm_source'] ) ? $_SESSION['utm_source'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_medium'    => isset( $_SESSION['utm_medium'] ) ? $_SESSION['utm_medium'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_term'      => isset( $_SESSION['utm_term'] ) ? $_SESSION['utm_term'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-	);
+    $sessionData = getSessionData(); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
 
     $url = 'https://bettermove.flg360.co.uk/api/APILeadCreateUpdate.php';
     $xml = '<?xml version="1.0" encoding="UTF-8"?>

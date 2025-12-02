@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$session_data = getSessionData();
+$session_data = $_COOKIE;
 
 ?>
 <div class="container-xl py-5">
@@ -17,7 +17,4 @@ $session_data = getSessionData();
     	echo $key . ': ' . htmlspecialchars( $value ) . '<br>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	?>
-
-	<h2>Cookies:</h2>
-	<pre><?php print_r( $_COOKIE ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></pre>
 </div>

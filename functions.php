@@ -218,7 +218,7 @@ function post_to_third_party( $entry, $form ) { // phpcs:ignore Generic.CodeAnal
     if ( 'Letter' === $is_letter ) {
         $source = 'Letter';
     } else {
-        $source = $sessionData['referring_url']; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+        $source = $sessionData['referring_url'] ? $sessionData['referring_url'] : $sessionData['utm_source']; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
     }
 
 	// phpcs:disable

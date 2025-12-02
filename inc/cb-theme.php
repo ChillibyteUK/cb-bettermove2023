@@ -285,6 +285,19 @@ add_action( 'init', 'start_custom_session', 1 );
  * the referring URL, first page visited, and UTM tracking parameters.
  */
 function store_session_data() {
+    // Debug: log what we're seeing.
+    if ( ! isset( $_SESSION['debug_log'] ) ) {
+        $_SESSION['debug_log'] = array();
+    }
+    
+    $debug_entry = array(
+        'time'         => date( 'H:i:s' ),
+        'url'          => isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : 'N/A',
+        'query_string' => isset( $_SERVER['QUERY_STRING'] ) ? sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ) : 'N/A',
+        'has_captured' => isset( $_SESSION['data_captured'] ) ? 'YES' : 'NO',
+    );
+    $_SESSION['debug_log'][] = $debug_entry;
+    
     if ( ! isset( $_SESSION['data_captured'] ) ) {
         $has_tracking_data = false;
 

@@ -18,6 +18,9 @@ $session_data = getSessionData();
 	}
 	?>
 
+	<h2>Debug Log:</h2>
+	<pre><?php print_r( isset( $_SESSION['debug_log'] ) ? $_SESSION['debug_log'] : 'No debug log' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></pre>
+
 	<h2>Raw Session Data:</h2>
 	<pre><?php print_r( $_SESSION ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></pre>
 </div>

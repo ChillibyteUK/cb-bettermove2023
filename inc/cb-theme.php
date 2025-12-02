@@ -326,6 +326,21 @@ function store_session_data() {
 }
 
 /**
+ * Clear session data for testing.
+ * REMOVE THIS FUNCTION IN PRODUCTION!
+ */
+function clear_session_for_testing() {
+    if ( isset( $_GET['clear_session'] ) ) {
+        session_destroy();
+        session_start();
+        wp_redirect( remove_query_arg( 'clear_session' ) );
+        exit;
+    }
+}
+add_action( 'init', 'clear_session_for_testing', 0 );
+
+
+/**
  * Debug session data by outputting it as HTML comments.
  *
  * Outputs all session data in HTML comments for debugging purposes

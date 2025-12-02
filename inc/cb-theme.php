@@ -286,14 +286,18 @@ add_action( 'init', 'start_custom_session', 1 );
  */
 function store_session_data() {
     if ( ! isset( $_SESSION['data_captured'] ) ) {
+        $data_was_captured = false;
+
         // Store referring URL if available.
         if ( ! isset( $_SESSION['referring_url'] ) && isset( $_SERVER['HTTP_REFERER'] ) ) {
             $_SESSION['referring_url'] = sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) );
+            $data_was_captured = true;
         }
 
         if ( ! isset( $_SESSION['first_page'] ) && isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
             $first_page_url         = 'https://' . sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) . strtok( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '?' );
             $_SESSION['first_page'] = $first_page_url;
+            $data_was_captured = true;
         }
 
         // This splits the URL parameters into name/value pairs.
@@ -303,17 +307,21 @@ function store_session_data() {
 			'utm_term',
 		);
 
-        if ( isset( $_SERVER['QUERY_STRING'] ) ) {
-            parse_str( sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ), $query_params );
+        if ( isset( $_SERVER['QUERY_STRING'] ) && ! empty( $_SERVER['QUERY_STRING'] ) ) {
+            // Parse the query string first, then sanitize individual values.
+            parse_str( wp_unslash( $_SERVER['QUERY_STRING'] ), $query_params );
             foreach ( $parameters_to_capture as $param ) {
                 if ( isset( $query_params[ $param ] ) ) {
                     $_SESSION[ $param ] = sanitize_text_field( $query_params[ $param ] );
+                    $data_was_captured = true;
                 }
             }
         }
 
-        // Mark data as captured.
-        $_SESSION['data_captured'] = true;
+        // Only mark data as captured if we actually captured something meaningful.
+        if ( $data_was_captured ) {
+            $_SESSION['data_captured'] = true;
+        }
     }
 }
 

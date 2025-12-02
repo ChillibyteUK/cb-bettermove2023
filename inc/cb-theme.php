@@ -285,13 +285,18 @@ add_action( 'init', 'start_custom_session', 1 );
  * the referring URL, first page visited, and UTM tracking parameters.
  */
 function store_session_data() {
+    // Don't capture session data from AJAX requests or admin pages.
+    if ( wp_doing_ajax() || is_admin() ) {
+        return;
+    }
+    
     // Debug: log what we're seeing.
     if ( ! isset( $_SESSION['debug_log'] ) ) {
         $_SESSION['debug_log'] = array();
     }
     
     $debug_entry = array(
-        'time'         => date( 'H:i:s' ),
+        'time'         => gmdate( 'H:i:s' ),
         'url'          => isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : 'N/A',
         'query_string' => isset( $_SERVER['QUERY_STRING'] ) ? sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ) : 'N/A',
         'has_captured' => isset( $_SESSION['data_captured'] ) ? 'YES' : 'NO',
@@ -301,10 +306,16 @@ function store_session_data() {
     if ( ! isset( $_SESSION['data_captured'] ) ) {
         $has_tracking_data = false;
 
-        // Store referring URL if available.
+        // Store referring URL only if it's external (not from same domain).
         if ( ! isset( $_SESSION['referring_url'] ) && isset( $_SERVER['HTTP_REFERER'] ) ) {
-            $_SESSION['referring_url'] = sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) );
-            $has_tracking_data         = true;
+            $referer         = sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) );
+            $current_domain  = isset( $_SERVER['HTTP_HOST'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) : '';
+            $is_external_ref = ( strpos( $referer, $current_domain ) === false );
+            
+            if ( $is_external_ref ) {
+                $_SESSION['referring_url'] = $referer;
+                $has_tracking_data         = true;
+            }
         }
 
         // This splits the URL parameters into name/value pairs.
@@ -331,7 +342,7 @@ function store_session_data() {
             $_SESSION['first_page'] = $first_page_url;
         }
 
-        // Only mark data as captured if we have meaningful tracking data (referrer or UTM params).
+        // Only mark data as captured if we have meaningful tracking data (external referrer or UTM params).
         if ( $has_tracking_data ) {
             $_SESSION['data_captured'] = true;
         }

@@ -286,18 +286,12 @@ add_action( 'init', 'start_custom_session', 1 );
  */
 function store_session_data() {
     if ( ! isset( $_SESSION['data_captured'] ) ) {
-        $data_was_captured = false;
+        $has_tracking_data = false;
 
         // Store referring URL if available.
         if ( ! isset( $_SESSION['referring_url'] ) && isset( $_SERVER['HTTP_REFERER'] ) ) {
             $_SESSION['referring_url'] = sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) );
-            $data_was_captured = true;
-        }
-
-        if ( ! isset( $_SESSION['first_page'] ) && isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
-            $first_page_url         = 'https://' . sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) . strtok( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '?' );
-            $_SESSION['first_page'] = $first_page_url;
-            $data_was_captured = true;
+            $has_tracking_data         = true;
         }
 
         // This splits the URL parameters into name/value pairs.
@@ -309,17 +303,23 @@ function store_session_data() {
 
         if ( isset( $_SERVER['QUERY_STRING'] ) && ! empty( $_SERVER['QUERY_STRING'] ) ) {
             // Parse the query string first, then sanitize individual values.
-            parse_str( wp_unslash( $_SERVER['QUERY_STRING'] ), $query_params );
+            parse_str( wp_unslash( $_SERVER['QUERY_STRING'] ), $query_params ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
             foreach ( $parameters_to_capture as $param ) {
                 if ( isset( $query_params[ $param ] ) ) {
                     $_SESSION[ $param ] = sanitize_text_field( $query_params[ $param ] );
-                    $data_was_captured = true;
+                    $has_tracking_data  = true;
                 }
             }
         }
 
-        // Only mark data as captured if we actually captured something meaningful.
-        if ( $data_was_captured ) {
+        // Always store first_page, but only mark as captured if we have tracking data.
+        if ( ! isset( $_SESSION['first_page'] ) && isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
+            $first_page_url         = 'https://' . sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) . strtok( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '?' );
+            $_SESSION['first_page'] = $first_page_url;
+        }
+
+        // Only mark data as captured if we have meaningful tracking data (referrer or UTM params).
+        if ( $has_tracking_data ) {
             $_SESSION['data_captured'] = true;
         }
     }

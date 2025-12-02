@@ -156,15 +156,7 @@ add_filter( 'wpseo_next_rel_link', 'bg_disable_front_page_wpseo_next_rel_link' )
  * Get session data.
  */
 function getSessionData() { // phpcs:ignore WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
-    $sessionData = array( // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
-        'referring_url' => isset( $_SESSION['referring_url'] ) ? $_SESSION['referring_url'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'first_page'    => isset( $_SESSION['first_page'] ) ? $_SESSION['first_page'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_source'    => isset( $_SESSION['utm_source'] ) ? $_SESSION['utm_source'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_medium'    => isset( $_SESSION['utm_medium'] ) ? $_SESSION['utm_medium'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-        'utm_term'      => isset( $_SESSION['utm_term'] ) ? $_SESSION['utm_term'] : '', // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-	);
-
-    return $sessionData; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase
+    return get_session_data_from_cookies();
 }
 
 /**

@@ -265,114 +265,38 @@ function cb_theme_enqueue() {
 add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
 
 /**
- * Start custom session and store session data.
+ * Enqueue session tracking script.
  *
- * Initiates a PHP session if one doesn't exist and calls the function
- * to store session data including referrer and UTM parameters.
+ * Uses JavaScript and cookies instead of PHP sessions to avoid
+ * issues with server-side page caching (like Kinsta CDN).
  */
-function start_custom_session() {
-    // Clear session for testing if requested.
-    if ( isset( $_GET['clear_session'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-        if ( session_id() ) {
-            session_destroy();
-        }
-        session_start();
-        $_SESSION = array(); // Clear all session data.
-        wp_safe_redirect( remove_query_arg( 'clear_session' ) );
-        exit;
-    }
-
-	if ( ! session_id() ) {
-		session_start();
-    }
-    store_session_data();
-}
-add_action( 'init', 'start_custom_session', 1 );
-
-/**
- * Store session data including referrer URL, first page, and UTM parameters.
- *
- * Captures and stores various session data only once per session including
- * the referring URL, first page visited, and UTM tracking parameters.
- */
-function store_session_data() {
-    // Don't capture session data from AJAX requests or admin pages.
-    if ( wp_doing_ajax() || is_admin() ) {
-        return;
-    }
-    
-    // Debug: log what we're seeing.
-    if ( ! isset( $_SESSION['debug_log'] ) ) {
-        $_SESSION['debug_log'] = array();
-    }
-    
-    $debug_entry = array(
-        'time'         => gmdate( 'H:i:s' ),
-        'url'          => isset( $_SERVER['REQUEST_URI'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : 'N/A',
-        'query_string' => isset( $_SERVER['QUERY_STRING'] ) ? sanitize_text_field( wp_unslash( $_SERVER['QUERY_STRING'] ) ) : 'N/A',
-        'has_captured' => isset( $_SESSION['data_captured'] ) ? 'YES' : 'NO',
+function enqueue_session_tracking_script() {
+    $the_theme = wp_get_theme();
+    wp_enqueue_script(
+        'cb-session-tracking',
+        get_stylesheet_directory_uri() . '/js/session-tracking.js',
+        array(),
+        $the_theme->get( 'Version' ),
+        true
     );
-    $_SESSION['debug_log'][] = $debug_entry;
-    
-    if ( ! isset( $_SESSION['data_captured'] ) ) {
-        $has_tracking_data = false;
-
-        // Store referring URL only if it's external (not from same domain).
-        if ( ! isset( $_SESSION['referring_url'] ) && isset( $_SERVER['HTTP_REFERER'] ) ) {
-            $referer         = sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) );
-            $current_domain  = isset( $_SERVER['HTTP_HOST'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) : '';
-            $is_external_ref = ( strpos( $referer, $current_domain ) === false );
-            
-            if ( $is_external_ref ) {
-                $_SESSION['referring_url'] = $referer;
-                $has_tracking_data         = true;
-            }
-        }
-
-        // This splits the URL parameters into name/value pairs.
-        $parameters_to_capture = array(
-            'utm_source',
-			'utm_medium',
-			'utm_term',
-		);
-
-        if ( isset( $_SERVER['QUERY_STRING'] ) && ! empty( $_SERVER['QUERY_STRING'] ) ) {
-            // Parse the query string first, then sanitize individual values.
-            parse_str( wp_unslash( $_SERVER['QUERY_STRING'] ), $query_params ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-            foreach ( $parameters_to_capture as $param ) {
-                if ( isset( $query_params[ $param ] ) ) {
-                    $_SESSION[ $param ] = sanitize_text_field( $query_params[ $param ] );
-                    $has_tracking_data  = true;
-                }
-            }
-        }
-
-        // Always store first_page, but only mark as captured if we have tracking data.
-        if ( ! isset( $_SESSION['first_page'] ) && isset( $_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'] ) ) {
-            $first_page_url         = 'https://' . sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) . strtok( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), '?' );
-            $_SESSION['first_page'] = $first_page_url;
-        }
-
-        // Only mark data as captured if we have meaningful tracking data (external referrer or UTM params).
-        if ( $has_tracking_data ) {
-            $_SESSION['data_captured'] = true;
-        }
-    }
 }
+add_action( 'wp_enqueue_scripts', 'enqueue_session_tracking_script' );
 
 /**
- * Debug session data by outputting it as HTML comments.
+ * Get session data from cookies.
  *
- * Outputs all session data in HTML comments for debugging purposes
- * when a session is active.
+ * Reads tracking data from browser cookies instead of PHP sessions
+ * to avoid issues with server-side caching.
+ *
+ * @return array Session data from cookies.
  */
-function debug_session_data() {
-    if ( session_id() ) {
-        echo '<!--';
-        echo '<pre>';
-        print_r( $_SESSION ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
-        echo '</pre>';
-        echo '-->';
-    }
+function get_session_data_from_cookies() {
+    $session_data = array(
+        'referring_url' => isset( $_COOKIE['cb_referring_url'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_referring_url'] ) ) : '',
+        'first_page'    => isset( $_COOKIE['cb_first_page'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_first_page'] ) ) : '',
+        'utm_source'    => isset( $_COOKIE['cb_utm_source'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_utm_source'] ) ) : '',
+        'utm_medium'    => isset( $_COOKIE['cb_utm_medium'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_utm_medium'] ) ) : '',
+        'utm_term'      => isset( $_COOKIE['cb_utm_term'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_utm_term'] ) ) : '',
+    );
+    return $session_data;
 }
-add_action( 'wp_footer', 'debug_session_data' );

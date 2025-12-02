@@ -271,6 +271,17 @@ add_action( 'wp_enqueue_scripts', 'cb_theme_enqueue' );
  * to store session data including referrer and UTM parameters.
  */
 function start_custom_session() {
+    // Clear session for testing if requested.
+    if ( isset( $_GET['clear_session'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        if ( session_id() ) {
+            session_destroy();
+        }
+        session_start();
+        $_SESSION = array(); // Clear all session data.
+        wp_safe_redirect( remove_query_arg( 'clear_session' ) );
+        exit;
+    }
+
 	if ( ! session_id() ) {
 		session_start();
     }
@@ -348,21 +359,6 @@ function store_session_data() {
         }
     }
 }
-
-/**
- * Clear session data for testing.
- * REMOVE THIS FUNCTION IN PRODUCTION!
- */
-function clear_session_for_testing() {
-    if ( isset( $_GET['clear_session'] ) ) {
-        session_destroy();
-        session_start();
-        wp_redirect( remove_query_arg( 'clear_session' ) );
-        exit;
-    }
-}
-add_action( 'init', 'clear_session_for_testing', 0 );
-
 
 /**
  * Debug session data by outputting it as HTML comments.

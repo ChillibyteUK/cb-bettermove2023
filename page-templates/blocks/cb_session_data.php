@@ -17,4 +17,7 @@ $session_data = getSessionData();
     	echo $key . ': ' . htmlspecialchars( $value ) . '<br>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	?>
+
+	<h2>Raw Session Data:</h2>
+	<pre><?php print_r( $_SESSION ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></pre>
 </div>

@@ -47,12 +47,12 @@
             }
         }
 
-        // Capture UTM parameters using standard utm_* cookie names
+        // Capture UTM parameters using cb_ prefix to avoid conflicts with Google Ads
         const utmParams = ['utm_source', 'utm_medium', 'utm_term'];
         utmParams.forEach(function(param) {
             const value = getUrlParam(param);
-            if (value && !getCookie(param)) {
-                setCookie(param, value, 30);
+            if (value && !getCookie('cb_' + param)) {
+                setCookie('cb_' + param, value, 30);
                 hasTrackingData = true;
             }
         });
@@ -72,7 +72,7 @@
     // Handle clear_session parameter
     if (getUrlParam('clear_session')) {
         // Clear all tracking cookies
-        const cookies = ['cb_referring_url', 'cb_first_page', 'utm_source', 'utm_medium', 'utm_term', 'cb_data_captured'];
+        const cookies = ['cb_referring_url', 'cb_first_page', 'cb_utm_source', 'cb_utm_medium', 'cb_utm_term', 'cb_data_captured'];
         cookies.forEach(function(cookie) {
             document.cookie = cookie + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
         });

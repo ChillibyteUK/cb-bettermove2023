@@ -294,9 +294,9 @@ function get_session_data_from_cookies() {
     $session_data = array(
         'referring_url' => isset( $_COOKIE['cb_referring_url'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_referring_url'] ) ) : '',
         'first_page'    => isset( $_COOKIE['cb_first_page'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_first_page'] ) ) : '',
-        'utm_source'    => isset( $_COOKIE['utm_source'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['utm_source'] ) ) : '',
-        'utm_medium'    => isset( $_COOKIE['utm_medium'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['utm_medium'] ) ) : '',
-        'utm_term'      => isset( $_COOKIE['utm_term'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['utm_term'] ) ) : '',
+        'utm_source'    => isset( $_COOKIE['cb_utm_source'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_utm_source'] ) ) : '',
+        'utm_medium'    => isset( $_COOKIE['cb_utm_medium'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_utm_medium'] ) ) : '',
+        'utm_term'      => isset( $_COOKIE['cb_utm_term'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['cb_utm_term'] ) ) : '',
     );
     return $session_data;
 }
